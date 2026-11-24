@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+import { content, langs, type Lang } from '../../i18n/content';
+export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
+const lang = Astro.params.lang as Lang;
+const c = content[lang];
+const base = 'https://sorevo.vercel.app';
+const jsonld = [
+  { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'Sorevo', url: `${base}/${lang}/`, description: c.desc, areaServed: { '@type': 'City', name: 'Barcelona' }, knowsLanguage: ['fr', 'en', 'es'], serviceType: 'Generative Engine Optimization (GEO/AEO)' },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faq.items.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Sorevo', url: `${base}/${lang}/`, inLanguage: lang }
+];
+const url = import.meta.env.PUBLIC_SUPABASE_URL ?? '';
+const key = import.meta.env.PUBLIC_SUPABASE_KEY ?? '';
+---
+<Base lang={lang} title={c.title} desc={c.desc} jsonld={jsonld}>
+<section class="hero"><div class="wrap grid">
+  <div>
+    <div class="label">{c.hero.label}</div>
+    <h1>{c.hero.h1}</h1>
+    <p class="sub">{c.hero.sub}</p>
+    <div class="cta-row"><a class="btn" href="#audit">{c.hero.cta1}</a><a class="btn ghost" href="#offre">{c.hero.cta2}</a></div>
+    <p class="disc">{c.hero.disclaimer}</p>
+  </div>
+  <div class="mock" aria-hidden="true">
+    <div class="q">{c.mock.q}</div>
+    <div class="row"><span class="n">1</span>{c.mock.a}</div>
+    <div class="row me"><span class="n">2</span>{c.mock.you}</div>
+    <div class="row"><span class="n">3</span>{c.mock.b}</div>
+    <small>{c.mock.note}</small>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap"><h2>{c.problem.h2}</h2>
+  <div class="cards">{c.problem.items.map(i => <div class="card"><h3>{i.t}</h3><p>{i.d}</p></div>)}</div>
+</div></section>
+
+<section id="methode"><div class="wrap"><h2>{c.method.h2}</h2>
+  <div class="cards">{c.method.steps.map(i => <div class="card"><h3>{i.t}</h3><p>{i.d}</p></div>)}</div>
+</div></section>
+
+<section id="offre" class="alt"><div class="wrap">
+  <div class="offer">
+    <div><h2>{c.offer.h2}</h2><p>{c.offer.intro}</p><div class="price">{c.offer.price}</div><p>{c.offer.priceNote}</p><a class="btn" href="#audit">{c.offer.cta}</a></div>
+    <div>
+      <ul>{c.offer.includes.map(i => <li>{i}</li>)}</ul>
+      <h3>{c.offer.notH}</h3><ul>{c.offer.not.map(i => <li class="x">{i}</li>)}</ul>
+      <h3>{c.offer.clientH}</h3><ul>{c.offer.client.map(i => <li>{i}</li>)}</ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="pilote"><div class="wrap"><h2>{c.pilot.h2}</h2><p style="color:var(--mu);max-width:640px">{c.pilot.d}</p>
+  <div class="two"><div class="card"><h3>✓</h3><ul>{c.pilot.give.map(i => <li>{i}</li>)}</ul></div><div class="card"><h3>⇄</h3><ul>{c.pilot.get.map(i => <li>{i}</li>)}</ul></div></div>
+  <p style="margin-top:28px"><a class="btn" href="#audit">{c.pilot.cta}</a></p>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap" style="max-width:820px"><h2>{c.faq.h2}</h2>
+  {c.faq.items.map(i => <details><summary>{i.q}</summary><p>{i.a}</p></details>)}
+</div></section>
+
+<section id="audit"><div class="wrap"><h2>{c.form.h2}</h2><p style="color:var(--mu)">{c.form.d}</p>
+  <form id="f" data-url={url} data-key={key} data-lang={lang} data-ok={c.form.ok} data-err={c.form.err} data-sending={c.form.sending} data-submit={c.form.submit}>
+    <label>{c.form.name}<input name="name" required maxlength="120" autocomplete="name" /></label>
+    <label>{c.form.email}<input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
+    <label>{c.form.company}<input name="company" required maxlength="160" autocomplete="organization" /></label>
+    <label>{c.form.website}<input name="website" type="url" maxlength="300" placeholder="https://" /></label>
+    <label>{c.form.service}<textarea name="service" rows="3" maxlength="500" placeholder={c.form.servicePh}></textarea></label>
+    <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <label class="chk"><input type="checkbox" name="consent" required /><span>{c.form.consent}</span></label>
+    <button class="btn" type="submit">{c.form.submit}</button>
+    <p class="msg" id="msg" role="status"></p>
+  </form>
+</div></section>
+</Base>
+<script>
+  const f = document.getElementById('f') as HTMLFormElement | null;
+  if (f) f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const d = f.dataset; const msg = document.getElementById('msg')!; const btn = f.querySelector('button')!;
+    const v = (n: string) => (f.elements.namedItem(n) as HTMLInputElement);
+    if (v('hp').value) return;
+    btn.disabled = true; btn.textContent = d.sending!; msg.textContent = ''; msg.className = 'msg';
+    try {
+      const body = { name: v('name').value.trim(), email: v('email').value.trim(), company: v('company').value.trim(), website: v('website').value.trim() || null, service: v('service').value.trim() || null, lang: d.lang, consent: v('consent').checked };
+      const r = await fetch(`${d.url}/rest/v1/audit_requests`, { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: d.key!, Authorization: `Bearer ${d.key}`, Prefer: 'return=minimal' }, body: JSON.stringify(body) });
+      if (!r.ok) throw new Error(String(r.status));
+      msg.textContent = d.ok!; msg.className = 'msg ok'; f.reset();
+    } catch { msg.textContent = d.err!; msg.className = 'msg err'; }
+    btn.disabled = false; btn.textContent = d.submit!;
+  });
+</script>
