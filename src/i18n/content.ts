@@ -1,142 +1,262 @@
 export const langs = ['fr', 'en', 'es'] as const;
 export type Lang = (typeof langs)[number];
+export const slugs = ['choose-an-agency', 'geo-vs-seo', 'self-test'] as const;
 export const PRICE = '[250 €]';
-export const EMAIL = '[contact@sorevo.com]';
-
-type C = {
-  htmlLang: string; title: string; desc: string;
-  nav: { offer: string; method: string; pilot: string; faq: string; cta: string };
-  hero: { label: string; h1: string; sub: string; cta1: string; cta2: string; disclaimer: string };
-  mock: { q: string; a: string; b: string; you: string; note: string };
-  problem: { h2: string; items: { t: string; d: string }[] };
-  method: { h2: string; steps: { t: string; d: string }[] };
-  offer: { h2: string; intro: string; price: string; priceNote: string; includes: string[]; notH: string; not: string[]; clientH: string; client: string[]; cta: string };
-  pilot: { h2: string; d: string; give: string[]; get: string[]; cta: string };
-  faq: { h2: string; items: { q: string; a: string }[] };
-  form: { h2: string; d: string; name: string; email: string; company: string; website: string; service: string; servicePh: string; consent: string; submit: string; sending: string; ok: string; err: string };
-  footer: { legal: string; tag: string; rights: string };
-  legal: { h1: string; blocks: { t: string; d: string }[] };
-};
-
-export const content: Record<Lang, C> = {
-  fr: {
-    htmlLang: 'fr', title: 'Sorevo · Faites citer votre entreprise par les IA à Barcelone',
-    desc: "Sorevo aide les PME de Barcelone à apparaître dans les réponses de ChatGPT, Gemini, Claude et Perplexity : audit, contenus, données structurées, re-test à 30 jours.",
-    nav: { offer: 'Offre', method: 'Méthode', pilot: 'Programme pilote', faq: 'FAQ', cta: 'Audit gratuit' },
-    hero: { label: 'VISIBILITÉ DANS LES IA · BARCELONE', h1: 'Que les IA citent votre entreprise.', sub: "Vos futurs clients demandent déjà à ChatGPT, Gemini, Claude ou Perplexity qui choisir. Nous mesurons où vous en êtes, corrigeons ce qui vous rend invisible, puis vérifions le résultat 30 jours plus tard.", cta1: 'Recevoir mon mini-audit gratuit', cta2: "Voir l'offre", disclaimer: 'Aucune garantie de résultat : les réponses des IA varient. Nous mesurons avant et après.' },
-    mock: { q: 'Quelle entreprise me recommandes-tu pour [votre service] à Barcelone ?', a: 'Concurrent A', b: 'Concurrent B', you: '[Votre entreprise] cité', note: 'Exemple illustratif, pas un résultat réel.' },
-    problem: { h2: 'Pourquoi vous êtes peut-être invisible', items: [
-      { t: 'Un site flou pour une machine', d: "Les IA citent ce qu'elles comprennent vite : une offre claire, des pages précises, des réponses directes. Un site vague est ignoré." },
-      { t: 'Aucune donnée structurée', d: "Sans balisage schema.org, votre entreprise, vos services et votre zone d'activité restent ambigus." },
-      { t: 'Peu de sources tierces', d: "Les IA recoupent plusieurs sources. Des fiches et mentions cohérentes et légitimes renforcent votre crédibilité." } ] },
-    method: { h2: 'Notre méthode en 3 étapes', steps: [
-      { t: '1 · Audit', d: "Nous posons une série de questions réalistes de vos clients à ChatGPT, Gemini, Claude et Perplexity, et notons si vous êtes cité, par qui, et avec quelles sources." },
-      { t: '2 · Actions', d: "Réécriture des pages clés, FAQ, données structurées, cohérence de vos fiches en ligne. Un plan priorisé, des livrables prêts à publier." },
-      { t: '3 · Re-test à 30 jours', d: "Nous refaisons exactement les mêmes tests et vous remettons un comparatif avant/après, avec ce qui a bougé et ce qui reste à faire." } ] },
-    offer: { h2: "Une seule offre, tout est écrit", intro: "Pas de menu à rallonge. Un forfait, un périmètre clair, un livrable à la fin.", price: PRICE, priceNote: "Prix de lancement, paiement unique. L'audit de départ est gratuit.", includes: [
-      "Audit de visibilité initial : [30] questions testées sur ChatGPT, Gemini, Claude et Perplexity",
-      "Rapport de départ : êtes-vous cité, par qui, avec quelles sources",
-      "Plan d'actions priorisé",
-      "Rédaction de [5] contenus clés (page service, à propos, FAQ…) prêts à publier",
-      "Données structurées schema.org prêtes à intégrer",
-      "Liste de fiches et annuaires légitimes pertinents pour votre activité",
-      "Re-test à 30 jours et rapport comparatif avant/après" ],
-      notH: 'Ce que nous ne faisons pas', not: ["Promettre une place précise dans les réponses des IA", "Acheter de faux avis ou publier de faux messages sur des forums", "Poster à votre place sans votre accord"],
-      clientH: 'Ce que nous attendons de vous', client: ["Publier les contenus sur votre site (ou nous donner l'accès pour le faire)", "Valider les informations factuelles sur votre entreprise", "Nous répondre sous 3 jours ouvrés pendant les 30 jours"], cta: 'Commencer par le mini-audit gratuit' },
-    pilot: { h2: 'Programme pilote', d: "Nous ouvrons [2 à 3] places d'audit complet gratuit à des PME de Barcelone qui acceptent de partager honnêtement leur retour.", give: ["Un audit complet offert", "Un plan d'actions concret", "Un re-test à 30 jours"], get: ["Un témoignage honnête, positif ou non", "L'accord de citer les résultats mesurés (anonymisés si vous préférez)"], cta: 'Candidater au programme pilote' },
-    faq: { h2: 'Questions fréquentes', items: [
-      { q: "Qu'est-ce que le GEO / AEO ?", a: "C'est l'optimisation de votre présence pour les moteurs de réponses basés sur l'IA (ChatGPT, Gemini, Claude, Perplexity), afin qu'ils comprennent votre entreprise et puissent la citer." },
-      { q: 'Garantissez-vous une place dans les réponses ?', a: "Non. Les réponses des IA varient selon le moment, la formulation et la source. Nous mesurons avant et après et nous vous montrons les écarts, sans promesse de résultat." },
-      { q: 'Combien de temps faut-il ?', a: "L'audit prend quelques jours, les actions quelques semaines, puis le re-test a lieu 30 jours après la mise en ligne. Les modèles n'actualisent pas tous leurs sources au même rythme." },
-      { q: 'Travaillez-vous avec tous les secteurs ?', a: "Nous commençons par les PME B2B francophones à Barcelone, puis la restauration et les bars. Si votre activité est ailleurs, écrivez-nous." },
-      { q: 'Faites-vous du faux contenu ou de faux avis ?', a: "Jamais. Ce serait illégal, risqué pour votre réputation, et les IA le détectent de plus en plus." },
-      { q: 'Que faites-vous de mes données ?', a: "Seules les informations du formulaire sont conservées pour répondre à votre demande. Voir la page mentions légales." } ] },
-    form: { h2: 'Recevez votre mini-audit gratuit', d: "Dites-nous qui vous êtes. Nous testons votre visibilité et revenons vers vous par e-mail.", name: 'Nom', email: 'E-mail', company: 'Entreprise', website: 'Site web (optionnel)', service: 'Votre activité', servicePh: 'Ex. : logiciel de billetterie B2B à Barcelone', consent: "J'accepte que mes données soient utilisées pour me répondre (voir mentions légales).", submit: 'Envoyer ma demande', sending: 'Envoi…', ok: 'Merci ! Nous revenons vers vous très vite.', err: "Une erreur est survenue. Réessayez ou écrivez-nous par e-mail." },
-    footer: { legal: 'Mentions légales', tag: 'Visibilité dans les IA pour les PME de Barcelone.', rights: 'Tous droits réservés.' },
-    legal: { h1: 'Mentions légales et confidentialité', blocks: [
-      { t: 'Éditeur', d: "[À COMPLÉTER : nom, statut juridique, NIF/SIRET, adresse, e-mail de contact]" },
-      { t: 'Hébergement', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.' },
-      { t: 'Données personnelles', d: "Le formulaire collecte votre nom, e-mail, entreprise, site web et activité, uniquement pour répondre à votre demande. Elles sont stockées chez Supabase (UE). [À COMPLÉTER : durée de conservation, responsable du traitement.] Vous pouvez demander l'accès, la rectification ou la suppression à tout moment par e-mail." },
-      { t: 'Cookies', d: "Ce site n'utilise pas de cookies de suivi." } ] }
-  },
-  en: {
-    htmlLang: 'en', title: 'Sorevo · Get your business cited by AI in Barcelona',
-    desc: 'Sorevo helps Barcelona SMEs appear in ChatGPT, Gemini, Claude and Perplexity answers: audit, content, structured data, 30-day re-test.',
-    nav: { offer: 'Offer', method: 'Method', pilot: 'Pilot programme', faq: 'FAQ', cta: 'Free audit' },
-    hero: { label: 'AI VISIBILITY · BARCELONA', h1: 'Get AI to cite your business.', sub: 'Your future customers already ask ChatGPT, Gemini, Claude or Perplexity who to pick. We measure where you stand, fix what makes you invisible, then check the result 30 days later.', cta1: 'Get my free mini-audit', cta2: 'See the offer', disclaimer: 'No guarantee of results: AI answers vary. We measure before and after.' },
-    mock: { q: 'Which company do you recommend for [your service] in Barcelona?', a: 'Competitor A', b: 'Competitor B', you: '[Your company] cited', note: 'Illustrative example, not a real result.' },
-    problem: { h2: 'Why you may be invisible', items: [
-      { t: 'A site machines cannot read clearly', d: 'AI cites what it understands fast: a clear offer, precise pages, direct answers. A vague site gets skipped.' },
-      { t: 'No structured data', d: 'Without schema.org markup, your company, services and service area stay ambiguous.' },
-      { t: 'Few third-party sources', d: 'AI cross-checks sources. Consistent, legitimate listings and mentions build credibility.' } ] },
-    method: { h2: 'Our method in 3 steps', steps: [
-      { t: '1 · Audit', d: 'We ask realistic customer questions to ChatGPT, Gemini, Claude and Perplexity and record whether you are cited, by whom, and from which sources.' },
-      { t: '2 · Actions', d: 'Rewritten key pages, FAQ, structured data, consistent online listings. A prioritised plan and ready-to-publish deliverables.' },
-      { t: '3 · 30-day re-test', d: 'We rerun the exact same tests and hand you a before/after comparison: what moved and what is left to do.' } ] },
-    offer: { h2: 'One offer, everything written down', intro: 'No endless menu. One package, a clear scope, one deliverable at the end.', price: PRICE, priceNote: 'Launch price, one-off payment. The starting audit is free.', includes: [
-      'Initial visibility audit: [30] questions tested on ChatGPT, Gemini, Claude and Perplexity',
-      'Baseline report: are you cited, by whom, from which sources',
-      'Prioritised action plan',
-      '[5] key content pieces written (service page, about, FAQ…) ready to publish',
-      'schema.org structured data ready to integrate',
-      'List of legitimate listings and directories relevant to your business',
-      '30-day re-test and before/after comparison report' ],
-      notH: 'What we do not do', not: ['Promise a specific position in AI answers', 'Buy fake reviews or post fake messages on forums', 'Post on your behalf without your approval'],
-      clientH: 'What we expect from you', client: ['Publish the content on your site (or give us access to do it)', 'Validate factual information about your business', 'Reply within 3 working days during the 30 days'], cta: 'Start with the free mini-audit' },
-    pilot: { h2: 'Pilot programme', d: 'We are opening [2 to 3] free full-audit slots for Barcelona SMEs willing to share honest feedback.', give: ['A full audit, free', 'A concrete action plan', 'A 30-day re-test'], get: ['An honest testimonial, positive or not', 'Permission to cite the measured results (anonymised if you prefer)'], cta: 'Apply to the pilot' },
-    faq: { h2: 'Frequently asked questions', items: [
-      { q: 'What is GEO / AEO?', a: 'It is optimising your presence for AI answer engines (ChatGPT, Gemini, Claude, Perplexity) so they understand your business and can cite it.' },
-      { q: 'Do you guarantee a place in the answers?', a: 'No. AI answers vary by time, wording and source. We measure before and after and show you the differences, with no promise of results.' },
-      { q: 'How long does it take?', a: 'The audit takes a few days, actions a few weeks, then the re-test happens 30 days after publication. Models do not all refresh their sources at the same pace.' },
-      { q: 'Do you work with every sector?', a: 'We start with French-speaking B2B SMEs in Barcelona, then restaurants and bars. If you are elsewhere, write to us.' },
-      { q: 'Do you create fake content or reviews?', a: 'Never. It would be illegal, risky for your reputation, and AI increasingly detects it.' },
-      { q: 'What do you do with my data?', a: 'Only the form data is kept, to answer your request. See the legal page.' } ] },
-    form: { h2: 'Get your free mini-audit', d: 'Tell us who you are. We test your visibility and get back to you by email.', name: 'Name', email: 'Email', company: 'Company', website: 'Website (optional)', service: 'Your business', servicePh: 'E.g. B2B ticketing software in Barcelona', consent: 'I agree that my data is used to reply to me (see legal page).', submit: 'Send my request', sending: 'Sending…', ok: 'Thank you! We will get back to you shortly.', err: 'Something went wrong. Please retry or email us.' },
-    footer: { legal: 'Legal notice', tag: 'AI visibility for Barcelona SMEs.', rights: 'All rights reserved.' },
-    legal: { h1: 'Legal notice and privacy', blocks: [
-      { t: 'Publisher', d: '[TO COMPLETE: name, legal status, tax ID, address, contact email]' },
-      { t: 'Hosting', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.' },
-      { t: 'Personal data', d: 'The form collects your name, email, company, website and business, only to answer your request. It is stored with Supabase (EU). [TO COMPLETE: retention period, data controller.] You can request access, correction or deletion at any time by email.' },
-      { t: 'Cookies', d: 'This site does not use tracking cookies.' } ] }
-  },
-  es: {
-    htmlLang: 'es', title: 'Sorevo · Que las IA citen su empresa en Barcelona',
-    desc: 'Sorevo ayuda a las pymes de Barcelona a aparecer en las respuestas de ChatGPT, Gemini, Claude y Perplexity: auditoría, contenidos, datos estructurados y re-test a 30 días.',
-    nav: { offer: 'Oferta', method: 'Método', pilot: 'Programa piloto', faq: 'FAQ', cta: 'Auditoría gratis' },
-    hero: { label: 'VISIBILIDAD EN LAS IA · BARCELONA', h1: 'Que las IA citen su empresa.', sub: 'Sus futuros clientes ya preguntan a ChatGPT, Gemini, Claude o Perplexity a quién elegir. Medimos dónde está, corregimos lo que le hace invisible y verificamos el resultado 30 días después.', cta1: 'Recibir mi mini-auditoría gratis', cta2: 'Ver la oferta', disclaimer: 'Sin garantía de resultados: las respuestas de las IA varían. Medimos antes y después.' },
-    mock: { q: '¿Qué empresa me recomiendas para [su servicio] en Barcelona?', a: 'Competidor A', b: 'Competidor B', you: '[Su empresa] citada', note: 'Ejemplo ilustrativo, no es un resultado real.' },
-    problem: { h2: 'Por qué quizá es invisible', items: [
-      { t: 'Una web poco clara para una máquina', d: 'Las IA citan lo que entienden rápido: una oferta clara, páginas precisas, respuestas directas. Una web vaga se ignora.' },
-      { t: 'Sin datos estructurados', d: 'Sin marcado schema.org, su empresa, sus servicios y su zona de actividad quedan ambiguos.' },
-      { t: 'Pocas fuentes de terceros', d: 'Las IA contrastan varias fuentes. Fichas y menciones coherentes y legítimas refuerzan su credibilidad.' } ] },
-    method: { h2: 'Nuestro método en 3 pasos', steps: [
-      { t: '1 · Auditoría', d: 'Planteamos preguntas realistas de sus clientes a ChatGPT, Gemini, Claude y Perplexity y anotamos si le citan, quién y con qué fuentes.' },
-      { t: '2 · Acciones', d: 'Reescritura de páginas clave, FAQ, datos estructurados y coherencia de sus fichas online. Un plan priorizado y entregables listos para publicar.' },
-      { t: '3 · Re-test a 30 días', d: 'Repetimos exactamente las mismas pruebas y le entregamos una comparativa antes/después: qué ha cambiado y qué falta.' } ] },
-    offer: { h2: 'Una sola oferta, todo por escrito', intro: 'Sin menús interminables. Un paquete, un alcance claro y un entregable final.', price: PRICE, priceNote: 'Precio de lanzamiento, pago único. La auditoría inicial es gratuita.', includes: [
-      'Auditoría inicial de visibilidad: [30] preguntas probadas en ChatGPT, Gemini, Claude y Perplexity',
-      'Informe de partida: si le citan, quién y con qué fuentes',
-      'Plan de acciones priorizado',
-      'Redacción de [5] contenidos clave (página de servicio, quiénes somos, FAQ…) listos para publicar',
-      'Datos estructurados schema.org listos para integrar',
-      'Lista de fichas y directorios legítimos relevantes para su actividad',
-      'Re-test a 30 días e informe comparativo antes/después' ],
-      notH: 'Lo que no hacemos', not: ['Prometer una posición concreta en las respuestas de las IA', 'Comprar reseñas falsas o publicar mensajes falsos en foros', 'Publicar en su nombre sin su acuerdo'],
-      clientH: 'Lo que esperamos de usted', client: ['Publicar los contenidos en su web (o darnos acceso para hacerlo)', 'Validar la información factual sobre su empresa', 'Responder en 3 días laborables durante los 30 días'], cta: 'Empezar con la mini-auditoría gratis' },
-    pilot: { h2: 'Programa piloto', d: 'Abrimos [2 o 3] plazas de auditoría completa gratuita para pymes de Barcelona dispuestas a compartir una opinión honesta.', give: ['Una auditoría completa gratuita', 'Un plan de acciones concreto', 'Un re-test a 30 días'], get: ['Un testimonio honesto, positivo o no', 'Permiso para citar los resultados medidos (anonimizados si lo prefiere)'], cta: 'Solicitar plaza en el piloto' },
-    faq: { h2: 'Preguntas frecuentes', items: [
-      { q: '¿Qué es el GEO / AEO?', a: 'Es optimizar su presencia para los motores de respuesta basados en IA (ChatGPT, Gemini, Claude, Perplexity) para que entiendan su empresa y puedan citarla.' },
-      { q: '¿Garantizan un lugar en las respuestas?', a: 'No. Las respuestas de las IA varían según el momento, la formulación y la fuente. Medimos antes y después y le mostramos las diferencias, sin prometer resultados.' },
-      { q: '¿Cuánto tarda?', a: 'La auditoría lleva unos días, las acciones unas semanas y el re-test se hace 30 días después de publicar. No todos los modelos actualizan sus fuentes al mismo ritmo.' },
-      { q: '¿Trabajan con todos los sectores?', a: 'Empezamos con pymes B2B francófonas en Barcelona y después restaurantes y bares. Si su actividad es otra, escríbanos.' },
-      { q: '¿Crean contenido o reseñas falsas?', a: 'Nunca. Sería ilegal, arriesgado para su reputación y las IA lo detectan cada vez más.' },
-      { q: '¿Qué hacen con mis datos?', a: 'Solo se conservan los datos del formulario para responder a su solicitud. Consulte el aviso legal.' } ] },
-    form: { h2: 'Reciba su mini-auditoría gratis', d: 'Cuéntenos quién es. Probamos su visibilidad y le respondemos por correo.', name: 'Nombre', email: 'Correo electrónico', company: 'Empresa', website: 'Sitio web (opcional)', service: 'Su actividad', servicePh: 'Ej.: software de ticketing B2B en Barcelona', consent: 'Acepto que mis datos se utilicen para responderme (ver aviso legal).', submit: 'Enviar mi solicitud', sending: 'Enviando…', ok: '¡Gracias! Le responderemos muy pronto.', err: 'Ha ocurrido un error. Inténtelo de nuevo o escríbanos por correo.' },
-    footer: { legal: 'Aviso legal', tag: 'Visibilidad en las IA para pymes de Barcelona.', rights: 'Todos los derechos reservados.' },
-    legal: { h1: 'Aviso legal y privacidad', blocks: [
-      { t: 'Titular', d: '[POR COMPLETAR: nombre, forma jurídica, NIF, dirección, correo de contacto]' },
-      { t: 'Alojamiento', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, EE. UU.' },
-      { t: 'Datos personales', d: 'El formulario recoge su nombre, correo, empresa, sitio web y actividad, solo para responder a su solicitud. Se almacenan en Supabase (UE). [POR COMPLETAR: plazo de conservación, responsable del tratamiento.] Puede solicitar acceso, rectificación o supresión en cualquier momento por correo.' },
-      { t: 'Cookies', d: 'Este sitio no utiliza cookies de seguimiento.' } ] }
-  }
+export const DATE = '2026-11-24';
+export const t: Record<Lang, any> = {
+fr: {
+ htmlLang: 'fr', locale: 'fr_FR',
+ title: 'Sorevo · Faites citer votre entreprise par les IA à Barcelone',
+ desc: "Sorevo aide les PME de Barcelone à apparaître dans les réponses de ChatGPT, Gemini, Claude et Perplexity : audit, contenus, données structurées, re-test à 30 jours.",
+ nav: { offer: 'Offre', method: 'Méthode', guides: 'Guides', about: 'À propos', faq: 'FAQ', cta: 'Audit gratuit' },
+ hero: { label: 'VISIBILITÉ DANS LES IA · BARCELONE', a: 'Que les IA ', b: 'citent', c: ' votre entreprise.', sub: "Vos futurs clients demandent déjà à une IA qui choisir. Nous mesurons où vous en êtes, corrigeons ce qui vous rend invisible, puis refaisons exactement les mêmes tests 30 jours plus tard.", cta1: 'Recevoir mon mini-audit gratuit', cta2: "Voir l'offre", disc: 'Aucune garantie de résultat : les réponses des IA varient. Nous mesurons avant et après.', engines: 'Nous testons sur' },
+ s1: { n: '01', label: 'Le constat', h2: 'Pourquoi une entreprise reste invisible', items: [
+  { t: 'Un site flou pour une machine', d: "Les IA reprennent ce qu'elles comprennent vite : une offre claire, des pages précises, des réponses directes. Un site vague est ignoré." },
+  { t: 'Aucune donnée structurée', d: "Sans balisage schema.org, votre entreprise, vos services et votre zone d'activité restent ambigus pour une machine." },
+  { t: 'Peu de sources tierces', d: "Les IA recoupent plusieurs sources. Des fiches et mentions cohérentes et légitimes renforcent votre crédibilité." } ] },
+ demo: { n: '02', label: 'Essayez', h2: "À quoi ressemble la différence", d: "Saisissez votre entreprise et votre activité. L'exemple ci-dessous montre le type de changement que nous cherchons à obtenir.", company: 'Votre entreprise', activity: 'Votre activité', companyPh: 'Ex. Korus', activityPh: 'billetterie B2B', before: 'Avant', after: 'Après (exemple)', q: 'Quelle entreprise me recommandes-tu pour {a} à Barcelone ?', note: "Exemple illustratif construit par nous. Ce n'est ni une vraie réponse d'IA ni un résultat obtenu.", compA: 'Concurrent A', compB: 'Concurrent B', compC: 'Concurrent C' },
+ method: { n: '03', label: 'La méthode', h2: 'Trois étapes, un calendrier clair', steps: [
+  { when: 'Jours 1 à 5', t: 'Audit', d: "Nous posons des questions réalistes de vos clients à ChatGPT, Gemini, Claude et Perplexity. Nous notons si vous êtes cité, par qui, avec quelles sources." },
+  { when: 'Semaines 2 à 4', t: 'Actions', d: "Réécriture des pages clés, FAQ, données structurées, cohérence de vos fiches en ligne. Un plan priorisé, des livrables prêts à publier." },
+  { when: '30 jours après publication', t: 'Re-test', d: "Mêmes questions, mêmes outils. Vous recevez un comparatif avant/après : ce qui a bougé, ce qui reste à faire." } ] },
+ offer: { n: '04', label: "L'offre", h2: 'Une seule offre, tout est écrit', intro: "Pas de menu à rallonge. Un forfait, un périmètre clair, un livrable à la fin. Pas d'engagement de 12 mois.", price: PRICE, priceNote: "Prix de lancement, paiement unique. L'audit de départ est gratuit.", incH: 'Inclus', includes: [
+  "Audit de visibilité initial : [30] questions testées sur ChatGPT, Gemini, Claude et Perplexity",
+  "Rapport de départ : êtes-vous cité, par qui, avec quelles sources",
+  "Plan d'actions priorisé",
+  "Rédaction de [5] contenus clés (page service, à propos, FAQ…) prêts à publier",
+  "Données structurées schema.org prêtes à intégrer",
+  "Liste de fiches et annuaires légitimes pertinents pour votre activité",
+  "Re-test à 30 jours et rapport comparatif avant/après" ],
+  notH: 'Non inclus, jamais', not: ["Promettre une place précise dans les réponses des IA", "Acheter de faux avis ou publier de faux messages sur des forums", "Poster à votre place sans votre accord"],
+  clientH: 'De votre côté', client: ["Publier les contenus sur votre site (ou nous donner l'accès pour le faire)", "Valider les informations factuelles sur votre entreprise", "Nous répondre sous 3 jours ouvrés pendant les 30 jours"], cta: 'Commencer par le mini-audit gratuit' },
+ pilot: { n: '05', label: 'Programme pilote', h2: 'Nous cherchons nos premiers cas, honnêtement', d: "Sorevo est nouveau et n'a pas encore de cas client publié. Nous ouvrons [2 à 3] audits complets gratuits à des PME de Barcelone.", give: 'Vous recevez', gives: ["Un audit complet offert", "Un plan d'actions concret", "Un re-test à 30 jours"], get: 'Nous demandons', gets: ["Un témoignage honnête, positif ou non", "L'accord de citer les résultats mesurés (anonymisés si vous préférez)"], cta: 'Candidater au programme pilote' },
+ limits: { n: '06', label: 'Nos limites', h2: 'Ce que nous ne savons pas (encore)', items: [
+  "Aucun outil ne montre exactement pourquoi une IA cite une entreprise plutôt qu'une autre.",
+  "Les réponses changent d'un jour à l'autre. Nous posons chaque question plusieurs fois et notons les écarts.",
+  "Les modèles n'actualisent pas tous leurs sources au même rythme : un effet peut mettre plus de 30 jours.",
+  "Sorevo démarre : pas encore de cas client public. C'est la raison du programme pilote." ] },
+ teaser: { n: '07', label: 'Guides', h2: 'Comprendre avant de choisir', all: 'Tous les guides' },
+ faqTeaser: { n: '08', label: 'FAQ', h2: 'Questions fréquentes', all: 'Toute la FAQ et le glossaire' },
+ form: { n: '09', label: 'Audit gratuit', h2: 'Recevez votre mini-audit gratuit', d: "Dites-nous qui vous êtes. Nous testons votre visibilité et revenons vers vous par e-mail.", name: 'Nom', email: 'E-mail', company: 'Entreprise', website: 'Site web (optionnel)', service: 'Votre activité', servicePh: 'Ex. : logiciel de billetterie B2B à Barcelone', consent: "J'accepte que mes données soient utilisées pour me répondre (voir mentions légales).", submit: 'Envoyer ma demande', sending: 'Envoi…', ok: 'Merci ! Nous revenons vers vous très vite.', err: "Une erreur est survenue. Réessayez ou écrivez-nous par e-mail." },
+ footer: { legal: 'Mentions légales', tag: 'Visibilité dans les IA pour les PME de Barcelone.', rights: 'Tous droits réservés.', nav: 'Navigation', lang: 'Langues' },
+ guidesPage: { h1: 'Guides', d: "Des explications simples, sans jargon, pour comprendre la visibilité dans les IA.", read: 'Lire', updated: 'Mis à jour le', by: 'Par Jules Tommy Martin', back: 'Tous les guides' },
+ about: { title: 'À propos · Sorevo', h1: 'À propos', lead: "Sorevo aide les PME de Barcelone à être comprises, et citées, par les assistants IA.", blocks: [
+  { t: 'Qui', d: "Sorevo est lancé par Jules Tommy Martin, étudiant en gestion à Esade (Barcelone), français, qui travaille en français, anglais et espagnol." },
+  { t: 'Pourquoi', d: "Quand un client demande à une IA qui choisir, la réponse dépend de ce que l'IA a pu comprendre de votre entreprise. Beaucoup de PME n'ont jamais vérifié ce que ces outils disent d'elles." },
+  { t: 'Comment nous travaillons', d: "Nous mesurons d'abord, nous agissons ensuite, nous mesurons à nouveau. Nous écrivons ce qui est inclus et ce qui ne l'est pas. Nous ne fabriquons ni faux avis ni faux messages." },
+  { t: 'Où nous en sommes', d: "Sorevo démarre. Nous n'avons pas encore de cas client publié : c'est l'objet du programme pilote." } ] },
+ faqPage: { title: 'FAQ et glossaire · Sorevo', h1: 'FAQ et glossaire', faqH: 'Questions fréquentes', glH: 'Glossaire',
+  items: [
+  { q: "Qu'est-ce que le GEO / AEO ?", a: "C'est l'optimisation de votre présence pour les moteurs de réponses basés sur l'IA (ChatGPT, Gemini, Claude, Perplexity), afin qu'ils comprennent votre entreprise et puissent la citer." },
+  { q: 'Garantissez-vous une place dans les réponses ?', a: "Non. Les réponses des IA varient selon le moment, la formulation et la source. Nous mesurons avant et après et nous vous montrons les écarts, sans promesse de résultat." },
+  { q: 'Combien de temps faut-il ?', a: "L'audit prend quelques jours, les actions quelques semaines, puis le re-test a lieu 30 jours après la mise en ligne. Les modèles n'actualisent pas tous leurs sources au même rythme." },
+  { q: 'Dois-je refaire mon site ?', a: "Pas forcément. Nous commençons par vos pages clés et vos données structurées. Si le site bloque tout, nous vous le disons dans le rapport." },
+  { q: 'Pourquoi un prix unique ?', a: "Pour que ce soit lisible : un périmètre écrit, un livrable, pas d'engagement de 12 mois." },
+  { q: 'Travaillez-vous avec tous les secteurs ?', a: "Nous commençons par les PME B2B francophones à Barcelone, puis la restauration et les bars. Si votre activité est ailleurs, écrivez-nous." },
+  { q: 'Faites-vous du faux contenu ou de faux avis ?', a: "Jamais. Ce serait illégal, risqué pour votre réputation, et les IA le détectent de plus en plus." },
+  { q: 'Que faites-vous de mes données ?', a: "Seules les informations du formulaire sont conservées pour répondre à votre demande. Voir les mentions légales." } ],
+  glossary: [
+  { q: 'GEO', a: "Generative Engine Optimization : optimiser sa présence pour être cité dans les réponses générées par une IA." },
+  { q: 'AEO', a: "Answer Engine Optimization : même idée, centrée sur les moteurs qui donnent une réponse directe." },
+  { q: 'Citation', a: "Quand une IA nomme votre entreprise ou renvoie vers votre site dans sa réponse." },
+  { q: 'schema.org', a: "Un vocabulaire standard pour décrire votre entreprise, vos services et vos questions fréquentes de façon lisible par une machine." },
+  { q: 'JSON-LD', a: "Le format dans lequel on écrit ces données structurées sur une page web." },
+  { q: 'Prompt', a: "La question ou consigne que l'utilisateur écrit à l'IA." } ] },
+ legal: { h1: 'Mentions légales et confidentialité', blocks: [
+  { t: 'Éditeur', d: "[À COMPLÉTER : nom, statut juridique, NIF/SIRET, adresse, e-mail de contact]" },
+  { t: 'Hébergement', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.' },
+  { t: 'Données personnelles', d: "Le formulaire collecte votre nom, e-mail, entreprise, site web et activité, uniquement pour répondre à votre demande. Elles sont stockées chez Supabase (UE). [À COMPLÉTER : durée de conservation, responsable du traitement.] Vous pouvez demander l'accès, la rectification ou la suppression à tout moment par e-mail." },
+  { t: 'Cookies', d: "Ce site n'utilise pas de cookies de suivi." } ] },
+ guides: {
+  'choose-an-agency': { t: 'Comment choisir une agence GEO : 6 questions à poser', d: "Quelles questions poser avant de signer avec une agence de visibilité dans les IA.", body: [
+   "Le GEO est un métier récent. Beaucoup d'agences l'ajoutent à leur offre sans méthode claire. Voici six questions qui permettent de trier.",
+   "1. Comment mesurez-vous le point de départ ? Une agence sérieuse teste des questions réelles sur plusieurs assistants avant d'agir.",
+   "2. Refaites-vous les mêmes tests après ? Sans mesure avant/après, impossible de savoir si quelque chose a changé.",
+   "3. Promettez-vous une position ? Méfiez-vous : les réponses des IA varient, personne ne peut la garantir.",
+   "4. Que dois-je publier moi-même ? Les contenus doivent vivre sur vos canaux. Demandez ce qui dépend de vous.",
+   "5. Que faites-vous des avis et des forums ? Les faux avis et les messages déguisés sont à proscrire.",
+   "6. Que contient exactement le forfait ? Exigez une liste écrite de livrables et une durée d'engagement claire." ] },
+  'geo-vs-seo': { t: 'GEO, AEO, SEO : ce qui change vraiment', d: "Les différences pratiques entre se classer sur Google et être cité par une IA.", body: [
+   "Le SEO cherche à placer vos pages dans une liste de résultats. Le GEO cherche à ce qu'une IA comprenne votre entreprise et la cite dans une réponse rédigée.",
+   "Beaucoup de fondamentaux sont communs : un site clair, des pages précises, une bonne structure, des sources fiables. Le GEO ne remplace pas le SEO, il s'ajoute.",
+   "Ce qui change : l'accent sur des réponses directes (FAQ, définitions), sur les données structurées, et sur la cohérence de votre présence en ligne, car une IA recoupe plusieurs sources.",
+   "Autre différence : une réponse d'IA n'est pas une position fixe. Elle varie. D'où l'intérêt de mesurer plusieurs fois, avant et après." ] },
+  'self-test': { t: 'Testez vous-même votre visibilité en 15 minutes', d: "Une méthode simple pour voir si ChatGPT, Gemini, Claude ou Perplexity vous citent.", body: [
+   "Ouvrez ChatGPT, Gemini, Claude et Perplexity dans des fenêtres de navigation privée si possible, et posez les mêmes questions à chacun.",
+   "1. « Quelle entreprise me recommandes-tu pour [votre service] à Barcelone ? »",
+   "2. « Quelles sont les meilleures entreprises de [votre secteur] à Barcelone pour une PME ? »",
+   "3. « Que sais-tu de [nom de votre entreprise] ? »",
+   "4. « Compare [votre entreprise] et [un concurrent]. »",
+   "Notez dans un tableau : êtes-vous cité, à quelle place, quelles sources l'IA affiche, et si les informations sont exactes. Refaites le test dans une semaine : les réponses bougent. C'est exactement ce que fait notre audit, en plus complet." ] } }
+},
+en: {
+ htmlLang: 'en', locale: 'en_GB',
+ title: 'Sorevo · Get your business cited by AI in Barcelona',
+ desc: 'Sorevo helps Barcelona SMEs appear in ChatGPT, Gemini, Claude and Perplexity answers: audit, content, structured data, 30-day re-test.',
+ nav: { offer: 'Offer', method: 'Method', guides: 'Guides', about: 'About', faq: 'FAQ', cta: 'Free audit' },
+ hero: { label: 'AI VISIBILITY · BARCELONA', a: 'Get AI to ', b: 'cite', c: ' your business.', sub: 'Your future customers already ask an AI who to pick. We measure where you stand, fix what makes you invisible, then rerun the exact same tests 30 days later.', cta1: 'Get my free mini-audit', cta2: 'See the offer', disc: 'No guarantee of results: AI answers vary. We measure before and after.', engines: 'We test on' },
+ s1: { n: '01', label: 'The problem', h2: 'Why a business stays invisible', items: [
+  { t: 'A site machines cannot read clearly', d: 'AI picks up what it understands quickly: a clear offer, precise pages, direct answers. A vague site gets skipped.' },
+  { t: 'No structured data', d: 'Without schema.org markup, your company, services and service area stay ambiguous to a machine.' },
+  { t: 'Few third-party sources', d: 'AI cross-checks sources. Consistent, legitimate listings and mentions build credibility.' } ] },
+ demo: { n: '02', label: 'Try it', h2: 'What the difference looks like', d: 'Enter your company and your business. The example below shows the kind of change we aim for.', company: 'Your company', activity: 'Your business', companyPh: 'E.g. Korus', activityPh: 'B2B ticketing', before: 'Before', after: 'After (example)', q: 'Which company do you recommend for {a} in Barcelona?', note: 'Illustrative example built by us. It is not a real AI answer nor an achieved result.', compA: 'Competitor A', compB: 'Competitor B', compC: 'Competitor C' },
+ method: { n: '03', label: 'The method', h2: 'Three steps, a clear timeline', steps: [
+  { when: 'Days 1 to 5', t: 'Audit', d: 'We ask realistic customer questions to ChatGPT, Gemini, Claude and Perplexity. We record whether you are cited, by whom, from which sources.' },
+  { when: 'Weeks 2 to 4', t: 'Actions', d: 'Rewritten key pages, FAQ, structured data, consistent online listings. A prioritised plan and ready-to-publish deliverables.' },
+  { when: '30 days after publication', t: 'Re-test', d: 'Same questions, same tools. You get a before/after comparison: what moved and what is left to do.' } ] },
+ offer: { n: '04', label: 'The offer', h2: 'One offer, everything written down', intro: 'No endless menu. One package, a clear scope, one deliverable at the end. No 12-month commitment.', price: PRICE, priceNote: 'Launch price, one-off payment. The starting audit is free.', incH: 'Included', includes: [
+  'Initial visibility audit: [30] questions tested on ChatGPT, Gemini, Claude and Perplexity',
+  'Baseline report: are you cited, by whom, from which sources',
+  'Prioritised action plan',
+  '[5] key content pieces written (service page, about, FAQ…) ready to publish',
+  'schema.org structured data ready to integrate',
+  'List of legitimate listings and directories relevant to your business',
+  '30-day re-test and before/after comparison report' ],
+  notH: 'Never included', not: ['Promising a specific position in AI answers', 'Buying fake reviews or posting fake messages on forums', 'Posting on your behalf without your approval'],
+  clientH: 'On your side', client: ['Publish the content on your site (or give us access to do it)', 'Validate factual information about your business', 'Reply within 3 working days during the 30 days'], cta: 'Start with the free mini-audit' },
+ pilot: { n: '05', label: 'Pilot programme', h2: 'We are looking for our first cases, honestly', d: 'Sorevo is new and has no published client case yet. We are opening [2 to 3] free full audits to Barcelona SMEs.', give: 'You get', gives: ['A full audit, free', 'A concrete action plan', 'A 30-day re-test'], get: 'We ask', gets: ['An honest testimonial, positive or not', 'Permission to cite the measured results (anonymised if you prefer)'], cta: 'Apply to the pilot' },
+ limits: { n: '06', label: 'Our limits', h2: 'What we do not (yet) know', items: [
+  'No tool shows exactly why an AI cites one company over another.',
+  'Answers change from day to day. We ask each question several times and note the differences.',
+  'Models do not all refresh their sources at the same pace: an effect can take longer than 30 days.',
+  'Sorevo is just starting: no public client case yet. That is why the pilot programme exists.' ] },
+ teaser: { n: '07', label: 'Guides', h2: 'Understand before you choose', all: 'All guides' },
+ faqTeaser: { n: '08', label: 'FAQ', h2: 'Frequently asked questions', all: 'Full FAQ and glossary' },
+ form: { n: '09', label: 'Free audit', h2: 'Get your free mini-audit', d: 'Tell us who you are. We test your visibility and get back to you by email.', name: 'Name', email: 'Email', company: 'Company', website: 'Website (optional)', service: 'Your business', servicePh: 'E.g. B2B ticketing software in Barcelona', consent: 'I agree that my data is used to reply to me (see legal page).', submit: 'Send my request', sending: 'Sending…', ok: 'Thank you! We will get back to you shortly.', err: 'Something went wrong. Please retry or email us.' },
+ footer: { legal: 'Legal notice', tag: 'AI visibility for Barcelona SMEs.', rights: 'All rights reserved.', nav: 'Navigation', lang: 'Languages' },
+ guidesPage: { h1: 'Guides', d: 'Plain explanations, no jargon, to understand AI visibility.', read: 'Read', updated: 'Updated', by: 'By Jules Tommy Martin', back: 'All guides' },
+ about: { title: 'About · Sorevo', h1: 'About', lead: 'Sorevo helps Barcelona SMEs get understood, and cited, by AI assistants.', blocks: [
+  { t: 'Who', d: 'Sorevo is started by Jules Tommy Martin, a French business student at Esade (Barcelona), working in French, English and Spanish.' },
+  { t: 'Why', d: 'When a customer asks an AI who to pick, the answer depends on what the AI could understand about your business. Many SMEs have never checked what these tools say about them.' },
+  { t: 'How we work', d: 'We measure first, act second, measure again. We write down what is included and what is not. We do not manufacture fake reviews or fake messages.' },
+  { t: 'Where we are', d: 'Sorevo is just starting. We have no published client case yet: that is the purpose of the pilot programme.' } ] },
+ faqPage: { title: 'FAQ and glossary · Sorevo', h1: 'FAQ and glossary', faqH: 'Frequently asked questions', glH: 'Glossary',
+  items: [
+  { q: 'What is GEO / AEO?', a: 'It is optimising your presence for AI answer engines (ChatGPT, Gemini, Claude, Perplexity) so they understand your business and can cite it.' },
+  { q: 'Do you guarantee a place in the answers?', a: 'No. AI answers vary by time, wording and source. We measure before and after and show you the differences, with no promise of results.' },
+  { q: 'How long does it take?', a: 'The audit takes a few days, actions a few weeks, then the re-test happens 30 days after publication. Models do not all refresh their sources at the same pace.' },
+  { q: 'Do I need to rebuild my site?', a: 'Not necessarily. We start with your key pages and structured data. If the site blocks everything, we tell you in the report.' },
+  { q: 'Why a single price?', a: 'To keep it readable: a written scope, one deliverable, no 12-month commitment.' },
+  { q: 'Do you work with every sector?', a: 'We start with French-speaking B2B SMEs in Barcelona, then restaurants and bars. If you are elsewhere, write to us.' },
+  { q: 'Do you create fake content or reviews?', a: 'Never. It would be illegal, risky for your reputation, and AI increasingly detects it.' },
+  { q: 'What do you do with my data?', a: 'Only the form data is kept, to answer your request. See the legal page.' } ],
+  glossary: [
+  { q: 'GEO', a: 'Generative Engine Optimization: optimising your presence to be cited in AI-generated answers.' },
+  { q: 'AEO', a: 'Answer Engine Optimization: the same idea, focused on engines that give a direct answer.' },
+  { q: 'Citation', a: 'When an AI names your business or links to your site in its answer.' },
+  { q: 'schema.org', a: 'A standard vocabulary to describe your business, services and FAQs in a machine-readable way.' },
+  { q: 'JSON-LD', a: 'The format in which that structured data is written on a web page.' },
+  { q: 'Prompt', a: 'The question or instruction a user writes to the AI.' } ] },
+ legal: { h1: 'Legal notice and privacy', blocks: [
+  { t: 'Publisher', d: '[TO COMPLETE: name, legal status, tax ID, address, contact email]' },
+  { t: 'Hosting', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.' },
+  { t: 'Personal data', d: 'The form collects your name, email, company, website and business, only to answer your request. It is stored with Supabase (EU). [TO COMPLETE: retention period, data controller.] You can request access, correction or deletion at any time by email.' },
+  { t: 'Cookies', d: 'This site does not use tracking cookies.' } ] },
+ guides: {
+  'choose-an-agency': { t: 'How to choose a GEO agency: 6 questions to ask', d: 'What to ask before signing with an AI visibility agency.', body: [
+   'GEO is a young field. Many agencies add it to their offer without a clear method. Here are six questions that help sort them out.',
+   '1. How do you measure the starting point? A serious agency tests real questions on several assistants before acting.',
+   '2. Do you rerun the same tests afterwards? Without a before/after measure there is no way to know if anything changed.',
+   '3. Do you promise a position? Be wary: AI answers vary and nobody can guarantee one.',
+   '4. What must I publish myself? Content has to live on your channels. Ask what depends on you.',
+   '5. What do you do about reviews and forums? Fake reviews and disguised messages should be off the table.',
+   '6. What exactly is in the package? Ask for a written list of deliverables and a clear commitment length.' ] },
+  'geo-vs-seo': { t: 'GEO, AEO, SEO: what really changes', d: 'The practical differences between ranking on Google and being cited by an AI.', body: [
+   'SEO aims to place your pages in a list of results. GEO aims for an AI to understand your business and cite it in a written answer.',
+   'Many fundamentals are shared: a clear site, precise pages, good structure, reliable sources. GEO does not replace SEO, it adds to it.',
+   'What changes: more emphasis on direct answers (FAQ, definitions), on structured data, and on the consistency of your online presence, because an AI cross-checks several sources.',
+   'Another difference: an AI answer is not a fixed position. It varies. Hence the value of measuring several times, before and after.' ] },
+  'self-test': { t: 'Test your own visibility in 15 minutes', d: 'A simple method to see whether ChatGPT, Gemini, Claude or Perplexity cite you.', body: [
+   'Open ChatGPT, Gemini, Claude and Perplexity, in private windows if possible, and ask each the same questions.',
+   '1. "Which company do you recommend for [your service] in Barcelona?"',
+   '2. "What are the best [your sector] companies in Barcelona for an SME?"',
+   '3. "What do you know about [your company name]?"',
+   '4. "Compare [your company] and [a competitor]."',
+   'Note in a table: are you cited, at what position, which sources the AI shows, and whether the information is accurate. Repeat the test in a week: answers move. That is exactly what our audit does, in more depth.' ] } }
+},
+es: {
+ htmlLang: 'es', locale: 'es_ES',
+ title: 'Sorevo · Que las IA citen su empresa en Barcelona',
+ desc: 'Sorevo ayuda a las pymes de Barcelona a aparecer en las respuestas de ChatGPT, Gemini, Claude y Perplexity: auditoría, contenidos, datos estructurados y re-test a 30 días.',
+ nav: { offer: 'Oferta', method: 'Método', guides: 'Guías', about: 'Nosotros', faq: 'FAQ', cta: 'Auditoría gratis' },
+ hero: { label: 'VISIBILIDAD EN LAS IA · BARCELONA', a: 'Que las IA ', b: 'citen', c: ' su empresa.', sub: 'Sus futuros clientes ya preguntan a una IA a quién elegir. Medimos dónde está, corregimos lo que le hace invisible y repetimos exactamente las mismas pruebas 30 días después.', cta1: 'Recibir mi mini-auditoría gratis', cta2: 'Ver la oferta', disc: 'Sin garantía de resultados: las respuestas de las IA varían. Medimos antes y después.', engines: 'Probamos en' },
+ s1: { n: '01', label: 'El problema', h2: 'Por qué una empresa sigue siendo invisible', items: [
+  { t: 'Una web poco clara para una máquina', d: 'Las IA recogen lo que entienden rápido: una oferta clara, páginas precisas, respuestas directas. Una web vaga se ignora.' },
+  { t: 'Sin datos estructurados', d: 'Sin marcado schema.org, su empresa, sus servicios y su zona de actividad quedan ambiguos para una máquina.' },
+  { t: 'Pocas fuentes de terceros', d: 'Las IA contrastan varias fuentes. Fichas y menciones coherentes y legítimas refuerzan su credibilidad.' } ] },
+ demo: { n: '02', label: 'Pruébelo', h2: 'Cómo se ve la diferencia', d: 'Escriba su empresa y su actividad. El ejemplo de abajo muestra el tipo de cambio que buscamos.', company: 'Su empresa', activity: 'Su actividad', companyPh: 'Ej. Korus', activityPh: 'ticketing B2B', before: 'Antes', after: 'Después (ejemplo)', q: '¿Qué empresa me recomiendas para {a} en Barcelona?', note: 'Ejemplo ilustrativo creado por nosotros. No es una respuesta real de una IA ni un resultado obtenido.', compA: 'Competidor A', compB: 'Competidor B', compC: 'Competidor C' },
+ method: { n: '03', label: 'El método', h2: 'Tres pasos, un calendario claro', steps: [
+  { when: 'Días 1 a 5', t: 'Auditoría', d: 'Planteamos preguntas realistas de sus clientes a ChatGPT, Gemini, Claude y Perplexity. Anotamos si le citan, quién y con qué fuentes.' },
+  { when: 'Semanas 2 a 4', t: 'Acciones', d: 'Reescritura de páginas clave, FAQ, datos estructurados y coherencia de sus fichas online. Un plan priorizado y entregables listos para publicar.' },
+  { when: '30 días tras publicar', t: 'Re-test', d: 'Mismas preguntas, mismas herramientas. Recibe una comparativa antes/después: qué ha cambiado y qué falta.' } ] },
+ offer: { n: '04', label: 'La oferta', h2: 'Una sola oferta, todo por escrito', intro: 'Sin menús interminables. Un paquete, un alcance claro y un entregable final. Sin compromiso de 12 meses.', price: PRICE, priceNote: 'Precio de lanzamiento, pago único. La auditoría inicial es gratuita.', incH: 'Incluido', includes: [
+  'Auditoría inicial de visibilidad: [30] preguntas probadas en ChatGPT, Gemini, Claude y Perplexity',
+  'Informe de partida: si le citan, quién y con qué fuentes',
+  'Plan de acciones priorizado',
+  'Redacción de [5] contenidos clave (página de servicio, quiénes somos, FAQ…) listos para publicar',
+  'Datos estructurados schema.org listos para integrar',
+  'Lista de fichas y directorios legítimos relevantes para su actividad',
+  'Re-test a 30 días e informe comparativo antes/después' ],
+  notH: 'Nunca incluido', not: ['Prometer una posición concreta en las respuestas de las IA', 'Comprar reseñas falsas o publicar mensajes falsos en foros', 'Publicar en su nombre sin su acuerdo'],
+  clientH: 'Por su parte', client: ['Publicar los contenidos en su web (o darnos acceso para hacerlo)', 'Validar la información factual sobre su empresa', 'Responder en 3 días laborables durante los 30 días'], cta: 'Empezar con la mini-auditoría gratis' },
+ pilot: { n: '05', label: 'Programa piloto', h2: 'Buscamos nuestros primeros casos, con honestidad', d: 'Sorevo es nuevo y aún no tiene casos de cliente publicados. Abrimos [2 o 3] auditorías completas gratuitas a pymes de Barcelona.', give: 'Usted recibe', gives: ['Una auditoría completa gratuita', 'Un plan de acciones concreto', 'Un re-test a 30 días'], get: 'Pedimos', gets: ['Un testimonio honesto, positivo o no', 'Permiso para citar los resultados medidos (anonimizados si lo prefiere)'], cta: 'Solicitar plaza en el piloto' },
+ limits: { n: '06', label: 'Nuestros límites', h2: 'Lo que (todavía) no sabemos', items: [
+  'Ninguna herramienta muestra exactamente por qué una IA cita a una empresa y no a otra.',
+  'Las respuestas cambian de un día a otro. Planteamos cada pregunta varias veces y anotamos las diferencias.',
+  'No todos los modelos actualizan sus fuentes al mismo ritmo: un efecto puede tardar más de 30 días.',
+  'Sorevo está empezando: aún no hay casos de cliente públicos. Por eso existe el programa piloto.' ] },
+ teaser: { n: '07', label: 'Guías', h2: 'Entender antes de elegir', all: 'Todas las guías' },
+ faqTeaser: { n: '08', label: 'FAQ', h2: 'Preguntas frecuentes', all: 'FAQ completa y glosario' },
+ form: { n: '09', label: 'Auditoría gratis', h2: 'Reciba su mini-auditoría gratis', d: 'Cuéntenos quién es. Probamos su visibilidad y le respondemos por correo.', name: 'Nombre', email: 'Correo electrónico', company: 'Empresa', website: 'Sitio web (opcional)', service: 'Su actividad', servicePh: 'Ej.: software de ticketing B2B en Barcelona', consent: 'Acepto que mis datos se utilicen para responderme (ver aviso legal).', submit: 'Enviar mi solicitud', sending: 'Enviando…', ok: '¡Gracias! Le responderemos muy pronto.', err: 'Ha ocurrido un error. Inténtelo de nuevo o escríbanos por correo.' },
+ footer: { legal: 'Aviso legal', tag: 'Visibilidad en las IA para pymes de Barcelona.', rights: 'Todos los derechos reservados.', nav: 'Navegación', lang: 'Idiomas' },
+ guidesPage: { h1: 'Guías', d: 'Explicaciones sencillas, sin jerga, para entender la visibilidad en las IA.', read: 'Leer', updated: 'Actualizado el', by: 'Por Jules Tommy Martin', back: 'Todas las guías' },
+ about: { title: 'Nosotros · Sorevo', h1: 'Nosotros', lead: 'Sorevo ayuda a las pymes de Barcelona a ser entendidas, y citadas, por los asistentes de IA.', blocks: [
+  { t: 'Quién', d: 'Sorevo lo pone en marcha Jules Tommy Martin, estudiante francés de gestión en Esade (Barcelona), que trabaja en francés, inglés y español.' },
+  { t: 'Por qué', d: 'Cuando un cliente pregunta a una IA a quién elegir, la respuesta depende de lo que la IA ha podido entender de su empresa. Muchas pymes nunca han comprobado qué dicen estas herramientas de ellas.' },
+  { t: 'Cómo trabajamos', d: 'Primero medimos, después actuamos, y volvemos a medir. Escribimos lo que está incluido y lo que no. No fabricamos reseñas ni mensajes falsos.' },
+  { t: 'Dónde estamos', d: 'Sorevo está empezando. Aún no tenemos casos de cliente publicados: ese es el objeto del programa piloto.' } ] },
+ faqPage: { title: 'FAQ y glosario · Sorevo', h1: 'FAQ y glosario', faqH: 'Preguntas frecuentes', glH: 'Glosario',
+  items: [
+  { q: '¿Qué es el GEO / AEO?', a: 'Es optimizar su presencia para los motores de respuesta basados en IA (ChatGPT, Gemini, Claude, Perplexity) para que entiendan su empresa y puedan citarla.' },
+  { q: '¿Garantizan un lugar en las respuestas?', a: 'No. Las respuestas de las IA varían según el momento, la formulación y la fuente. Medimos antes y después y le mostramos las diferencias, sin prometer resultados.' },
+  { q: '¿Cuánto tarda?', a: 'La auditoría lleva unos días, las acciones unas semanas y el re-test se hace 30 días después de publicar. No todos los modelos actualizan sus fuentes al mismo ritmo.' },
+  { q: '¿Tengo que rehacer mi web?', a: 'No necesariamente. Empezamos por sus páginas clave y sus datos estructurados. Si la web lo bloquea todo, se lo decimos en el informe.' },
+  { q: '¿Por qué un precio único?', a: 'Para que sea claro: un alcance escrito, un entregable, sin compromiso de 12 meses.' },
+  { q: '¿Trabajan con todos los sectores?', a: 'Empezamos con pymes B2B francófonas en Barcelona y después restaurantes y bares. Si su actividad es otra, escríbanos.' },
+  { q: '¿Crean contenido o reseñas falsas?', a: 'Nunca. Sería ilegal, arriesgado para su reputación y las IA lo detectan cada vez más.' },
+  { q: '¿Qué hacen con mis datos?', a: 'Solo se conservan los datos del formulario para responder a su solicitud. Consulte el aviso legal.' } ],
+  glossary: [
+  { q: 'GEO', a: 'Generative Engine Optimization: optimizar su presencia para ser citado en las respuestas generadas por una IA.' },
+  { q: 'AEO', a: 'Answer Engine Optimization: la misma idea, centrada en los motores que dan una respuesta directa.' },
+  { q: 'Cita', a: 'Cuando una IA nombra su empresa o enlaza a su web en su respuesta.' },
+  { q: 'schema.org', a: 'Un vocabulario estándar para describir su empresa, sus servicios y sus preguntas frecuentes de forma legible por máquinas.' },
+  { q: 'JSON-LD', a: 'El formato en el que se escriben esos datos estructurados en una página web.' },
+  { q: 'Prompt', a: 'La pregunta o instrucción que el usuario escribe a la IA.' } ] },
+ legal: { h1: 'Aviso legal y privacidad', blocks: [
+  { t: 'Titular', d: '[POR COMPLETAR: nombre, forma jurídica, NIF, dirección, correo de contacto]' },
+  { t: 'Alojamiento', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, EE. UU.' },
+  { t: 'Datos personales', d: 'El formulario recoge su nombre, correo, empresa, sitio web y actividad, solo para responder a su solicitud. Se almacenan en Supabase (UE). [POR COMPLETAR: plazo de conservación, responsable del tratamiento.] Puede solicitar acceso, rectificación o supresión en cualquier momento por correo.' },
+  { t: 'Cookies', d: 'Este sitio no utiliza cookies de seguimiento.' } ] },
+ guides: {
+  'choose-an-agency': { t: 'Cómo elegir una agencia GEO: 6 preguntas que hacer', d: 'Qué preguntar antes de firmar con una agencia de visibilidad en IA.', body: [
+   'El GEO es un oficio reciente. Muchas agencias lo añaden a su oferta sin un método claro. Aquí van seis preguntas para filtrar.',
+   '1. ¿Cómo miden el punto de partida? Una agencia seria prueba preguntas reales en varios asistentes antes de actuar.',
+   '2. ¿Repiten las mismas pruebas después? Sin medida antes/después no hay forma de saber si algo ha cambiado.',
+   '3. ¿Prometen una posición? Desconfíe: las respuestas de las IA varían y nadie puede garantizarla.',
+   '4. ¿Qué debo publicar yo? Los contenidos viven en sus canales. Pregunte qué depende de usted.',
+   '5. ¿Qué hacen con reseñas y foros? Las reseñas falsas y los mensajes disfrazados deben quedar descartados.',
+   '6. ¿Qué incluye exactamente el paquete? Pida una lista escrita de entregables y una duración de compromiso clara.' ] },
+  'geo-vs-seo': { t: 'GEO, AEO, SEO: qué cambia de verdad', d: 'Las diferencias prácticas entre posicionarse en Google y ser citado por una IA.', body: [
+   'El SEO busca colocar sus páginas en una lista de resultados. El GEO busca que una IA entienda su empresa y la cite en una respuesta redactada.',
+   'Muchos fundamentos son comunes: una web clara, páginas precisas, buena estructura, fuentes fiables. El GEO no sustituye al SEO, se suma a él.',
+   'Lo que cambia: más énfasis en respuestas directas (FAQ, definiciones), en los datos estructurados y en la coherencia de su presencia online, porque una IA contrasta varias fuentes.',
+   'Otra diferencia: una respuesta de IA no es una posición fija. Varía. De ahí el interés de medir varias veces, antes y después.' ] },
+  'self-test': { t: 'Compruebe su visibilidad usted mismo en 15 minutos', d: 'Un método sencillo para ver si ChatGPT, Gemini, Claude o Perplexity le citan.', body: [
+   'Abra ChatGPT, Gemini, Claude y Perplexity, a ser posible en ventanas privadas, y haga las mismas preguntas a cada uno.',
+   '1. «¿Qué empresa me recomiendas para [su servicio] en Barcelona?»',
+   '2. «¿Cuáles son las mejores empresas de [su sector] en Barcelona para una pyme?»',
+   '3. «¿Qué sabes de [nombre de su empresa]?»',
+   '4. «Compara [su empresa] y [un competidor].»',
+   'Anote en una tabla: si le citan, en qué posición, qué fuentes muestra la IA y si la información es correcta. Repita la prueba en una semana: las respuestas se mueven. Es exactamente lo que hace nuestra auditoría, con más profundidad.' ] } }
+}
 };

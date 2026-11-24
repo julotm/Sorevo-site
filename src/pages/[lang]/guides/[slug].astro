@@ -1,0 +1,12 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { t, langs, slugs, DATE, type Lang } from '../../../i18n/content';
+export function getStaticPaths() { return langs.flatMap(lang => slugs.map(slug => ({ params: { lang, slug } }))); }
+const lang = Astro.params.lang as Lang; const slug = Astro.params.slug as string; const c = t[lang]; const g = c.guides[slug];
+const jsonld = [{ '@context': 'https://schema.org', '@type': 'Article', headline: g.t, description: g.d, inLanguage: lang, datePublished: DATE, dateModified: DATE, author: { '@type': 'Person', name: 'Jules Tommy Martin' }, publisher: { '@type': 'Organization', name: 'Sorevo' }, mainEntityOfPage: `https://sorevo.vercel.app/${lang}/guides/${slug}/` }];
+---
+<Base lang={lang} path={`guides/${slug}/`} title={`${g.t} · Sorevo`} desc={g.d} jsonld={jsonld} og="article">
+<article class="page"><div class="wrap art"><p class="mono">{c.guidesPage.by} · {c.guidesPage.updated} {DATE}</p><h1 style="margin:16px 0 36px;font-size:clamp(36px,5vw,64px)">{g.t}</h1>
+{g.body.map((p: string) => <p>{p}</p>)}
+<p style="margin-top:40px"><a class="btn" href={`/${lang}/#audit`}>{c.nav.cta} →</a> &nbsp; <a class="lnk" href={`/${lang}/guides/`}>{c.guidesPage.back}</a></p></div></article>
+</Base>

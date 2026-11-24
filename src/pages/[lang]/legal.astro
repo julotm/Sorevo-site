@@ -1,10 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { content, langs, type Lang } from '../../i18n/content';
+import { t, langs, type Lang } from '../../i18n/content';
 export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
-const lang = Astro.params.lang as Lang;
-const c = content[lang];
+const lang = Astro.params.lang as Lang; const c = t[lang];
 ---
 <Base lang={lang} path="legal/" title={`${c.legal.h1} · Sorevo`} desc={c.legal.h1}>
-<div class="wrap legal"><h1>{c.legal.h1}</h1>{c.legal.blocks.map(b => <><h3>{b.t}</h3><p>{b.d}</p></>)}</div>
+<section class="page"><div class="wrap art"><h1>{c.legal.h1}</h1>{c.legal.blocks.map((b: any) => <><h3 style="margin:28px 0 8px;font-size:26px">{b.t}</h3><p class="mu">{b.d}</p></>)}</div></section>
 </Base>

@@ -1,0 +1,10 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { t, langs, slugs, type Lang } from '../../../i18n/content';
+export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
+const lang = Astro.params.lang as Lang; const c = t[lang]; const g = c.guidesPage;
+---
+<Base lang={lang} path="guides/" title={`${g.h1} · Sorevo`} desc={g.d}>
+<section class="page"><div class="wrap"><h1>{g.h1}</h1><p class="lead">{g.d}</p>
+<div class="cards" style="margin-top:48px">{slugs.map((s, k) => <a href={`/${lang}/guides/${s}/`}><span class="mono">0{k + 1}</span><h3>{c.guides[s].t}</h3><p>{c.guides[s].d}</p></a>)}</div></div></section>
+</Base>
