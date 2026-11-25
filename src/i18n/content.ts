@@ -7,7 +7,7 @@ export const t: Record<Lang, any> = {
 fr: {
  htmlLang: 'fr', locale: 'fr_FR',
  title: "Sorevo · Tout le monde demande à l'IA. Soyez dans la réponse.",
- desc: "Sorevo aide les entreprises à apparaître dans les réponses de ChatGPT, Gemini, Claude et Perplexity : audit, contenus, données structurées, re-test à 30 jours.",
+ desc: "Sorevo aide les entreprises à apparaître dans les réponses de ChatGPT, Gemini, AI Overviews, Claude et Perplexity : audit, contenus, données structurées, re-test à 30 jours.",
  nav: { offer: 'Offre', method: 'Méthode', guides: 'Guides', about: 'À propos', faq: 'FAQ', cta: 'Audit gratuit' },
  hero: { label: 'VISIBILITÉ DANS LES IA', a: "Tout le monde demande à l'IA. Soyez ", b: 'dans la réponse', c: '.', sub: "Vos futurs clients demandent déjà à une IA qui choisir. Nous mesurons où vous en êtes, corrigeons ce qui vous rend invisible, puis refaisons exactement les mêmes tests 30 jours plus tard.", cta1: 'Recevoir mon mini-audit gratuit', cta2: "Voir l'offre", disc: 'Aucune garantie de résultat : les réponses des IA varient. Nous mesurons avant et après.', engines: 'Nous testons sur' },
  s1: { n: '01', label: 'Le constat', h2: 'Pourquoi une entreprise reste invisible', items: [
@@ -16,11 +16,11 @@ fr: {
   { t: 'Peu de sources tierces', d: "Les IA recoupent plusieurs sources. Des fiches et mentions cohérentes et légitimes renforcent votre crédibilité." } ] },
  demo: { n: '02', label: 'Essayez', h2: "À quoi ressemble la différence", d: "Saisissez votre entreprise et votre activité. L'exemple ci-dessous montre le type de changement que nous cherchons à obtenir.", company: 'Votre entreprise', activity: 'Votre activité', companyPh: 'Ex. Zara', activityPh: 'vêtements et mode', before: 'Avant', after: 'Après (exemple)', q: 'Quelle entreprise me recommandes-tu dans ce domaine : {a} ?', note: "Exemple illustratif construit par nous. Ce n'est ni une vraie réponse d'IA ni un résultat obtenu.", compA: 'Concurrent A', compB: 'Concurrent B', compC: 'Concurrent C' },
  method: { n: '03', label: 'La méthode', h2: 'Trois étapes, un calendrier clair', steps: [
-  { when: 'Jours 1 à 5', t: 'Audit', d: "Nous posons des questions réalistes de vos clients à ChatGPT, Gemini, Claude et Perplexity. Nous notons si vous êtes cité, par qui, avec quelles sources." },
+  { when: 'Jours 1 à 5', t: 'Audit', d: "Nous posons des questions réalistes de vos clients à ChatGPT, Gemini, AI Overviews, Claude et Perplexity. Nous notons si vous êtes cité, par qui, avec quelles sources." },
   { when: 'Semaines 2 à 4', t: 'Actions', d: "Réécriture des pages clés, FAQ, données structurées, cohérence de vos fiches en ligne. Un plan priorisé, des livrables prêts à publier." },
   { when: '30 jours après publication', t: 'Re-test', d: "Mêmes questions, mêmes outils. Vous recevez un comparatif avant/après : ce qui a bougé, ce qui reste à faire." } ] },
  offer: { n: '04', label: "L'offre", h2: 'Une seule offre, tout est écrit', intro: "Pas de menu à rallonge. Un forfait, un périmètre clair, un livrable à la fin. Pas d'engagement de 12 mois.", price: PRICE, priceNote: "Prix de lancement, paiement unique. L'audit de départ est gratuit.", incH: 'Inclus', includes: [
-  "Audit de visibilité initial : 30 questions testées sur ChatGPT, Gemini, Claude et Perplexity",
+  "Audit de visibilité initial : 30 questions testées sur ChatGPT, Gemini, AI Overviews, Claude et Perplexity",
   "Rapport de départ : êtes-vous cité, par qui, avec quelles sources",
   "Plan d'actions priorisé",
   "Rédaction de 5 contenus clés (page service, à propos, FAQ…) prêts à publier",
@@ -47,7 +47,7 @@ fr: {
   { t: 'Où nous en sommes', d: "Sorevo démarre. Nous n'avons pas encore de cas client publié : c'est l'objet du programme pilote." } ] },
  faqPage: { title: 'FAQ et glossaire · Sorevo', h1: 'FAQ et glossaire', faqH: 'Questions fréquentes', glH: 'Glossaire',
   items: [
-  { q: "Qu'est-ce que le GEO / AEO ?", a: "C'est l'optimisation de votre présence pour les moteurs de réponses basés sur l'IA (ChatGPT, Gemini, Claude, Perplexity), afin qu'ils comprennent votre entreprise et puissent la citer." },
+  { q: "Qu'est-ce que le GEO / AEO ?", a: "C'est l'optimisation de votre présence pour les moteurs de réponses basés sur l'IA (ChatGPT, Gemini, AI Overviews, Claude, Perplexity), afin qu'ils comprennent votre entreprise et puissent la citer." },
   { q: 'Garantissez-vous une place dans les réponses ?', a: "Non. Les réponses des IA varient selon le moment, la formulation et la source. Nous mesurons avant et après et nous vous montrons les écarts, sans promesse de résultat." },
   { q: 'Combien de temps faut-il ?', a: "L'audit prend quelques jours, les actions quelques semaines, puis le re-test a lieu 30 jours après la mise en ligne. Les modèles n'actualisent pas tous leurs sources au même rythme." },
   { q: 'Dois-je refaire mon site ?', a: "Pas forcément. Nous commençons par vos pages clés et vos données structurées. Si le site bloque tout, nous vous le disons dans le rapport." },
@@ -92,8 +92,8 @@ fr: {
    "Beaucoup de fondamentaux sont communs : un site clair, des pages précises, une bonne structure, des sources fiables. Le GEO ne remplace pas le SEO, il s'ajoute.",
    "Ce qui change : l'accent sur des réponses directes (FAQ, définitions), sur les données structurées, et sur la cohérence de votre présence en ligne, car une IA recoupe plusieurs sources.",
    "Autre différence : une réponse d'IA n'est pas une position fixe. Elle varie. D'où l'intérêt de mesurer plusieurs fois, avant et après." ] },
-  'self-test': { t: 'Testez vous-même votre visibilité en 15 minutes', d: "Une méthode simple pour voir si ChatGPT, Gemini, Claude ou Perplexity vous citent.", body: [
-   "Ouvrez ChatGPT, Gemini, Claude et Perplexity dans des fenêtres de navigation privée si possible, et posez les mêmes questions à chacun.",
+  'self-test': { t: 'Testez vous-même votre visibilité en 15 minutes', d: "Une méthode simple pour voir si ChatGPT, Gemini, AI Overviews, Claude ou Perplexity vous citent.", body: [
+   "Ouvrez ChatGPT, Gemini, Claude et Perplexity dans des fenêtres de navigation privée si possible, et posez les mêmes questions à chacun. Faites aussi la recherche sur Google pour voir si un encadré AI Overviews apparaît.",
    "1. « Quelle entreprise me recommandes-tu pour [votre service] à [votre ville] ? »",
    "2. « Quelles sont les meilleures entreprises de [votre secteur] à [votre ville] pour une PME ? »",
    "3. « Que sais-tu de [nom de votre entreprise] ? »",
@@ -103,7 +103,7 @@ fr: {
 en: {
  htmlLang: 'en', locale: 'en_GB',
  title: 'Sorevo · Everyone asks AI. Be in the answer.',
- desc: 'Sorevo helps businesses appear in ChatGPT, Gemini, Claude and Perplexity answers: audit, content, structured data, 30-day re-test.',
+ desc: 'Sorevo helps businesses appear in ChatGPT, Gemini, AI Overviews, Claude and Perplexity answers: audit, content, structured data, 30-day re-test.',
  nav: { offer: 'Offer', method: 'Method', guides: 'Guides', about: 'About', faq: 'FAQ', cta: 'Free audit' },
  hero: { label: 'AI VISIBILITY', a: 'Everyone asks AI. Be ', b: 'in the answer', c: '.', sub: 'Your future customers already ask an AI who to pick. We measure where you stand, fix what makes you invisible, then rerun the exact same tests 30 days later.', cta1: 'Get my free mini-audit', cta2: 'See the offer', disc: 'No guarantee of results: AI answers vary. We measure before and after.', engines: 'We test on' },
  s1: { n: '01', label: 'The problem', h2: 'Why a business stays invisible', items: [
@@ -112,11 +112,11 @@ en: {
   { t: 'Few third-party sources', d: 'AI cross-checks sources. Consistent, legitimate listings and mentions build credibility.' } ] },
  demo: { n: '02', label: 'Try it', h2: 'What the difference looks like', d: 'Enter your company and your business. The example below shows the kind of change we aim for.', company: 'Your company', activity: 'Your business', companyPh: 'E.g. Zara', activityPh: 'clothing and fashion', before: 'Before', after: 'After (example)', q: 'Which company do you recommend in this field: {a}?', note: 'Illustrative example built by us. It is not a real AI answer nor an achieved result.', compA: 'Competitor A', compB: 'Competitor B', compC: 'Competitor C' },
  method: { n: '03', label: 'The method', h2: 'Three steps, a clear timeline', steps: [
-  { when: 'Days 1 to 5', t: 'Audit', d: 'We ask realistic customer questions to ChatGPT, Gemini, Claude and Perplexity. We record whether you are cited, by whom, from which sources.' },
+  { when: 'Days 1 to 5', t: 'Audit', d: 'We ask realistic customer questions to ChatGPT, Gemini, AI Overviews, Claude and Perplexity. We record whether you are cited, by whom, from which sources.' },
   { when: 'Weeks 2 to 4', t: 'Actions', d: 'Rewritten key pages, FAQ, structured data, consistent online listings. A prioritised plan and ready-to-publish deliverables.' },
   { when: '30 days after publication', t: 'Re-test', d: 'Same questions, same tools. You get a before/after comparison: what moved and what is left to do.' } ] },
  offer: { n: '04', label: 'The offer', h2: 'One offer, everything written down', intro: 'No endless menu. One package, a clear scope, one deliverable at the end. No 12-month commitment.', price: PRICE, priceNote: 'Launch price, one-off payment. The starting audit is free.', incH: 'Included', includes: [
-  'Initial visibility audit: 30 questions tested on ChatGPT, Gemini, Claude and Perplexity',
+  'Initial visibility audit: 30 questions tested on ChatGPT, Gemini, AI Overviews, Claude and Perplexity',
   'Baseline report: are you cited, by whom, from which sources',
   'Prioritised action plan',
   '5 key content pieces written (service page, about, FAQ…) ready to publish',
@@ -143,7 +143,7 @@ en: {
   { t: 'Where we are', d: 'Sorevo is just starting. We have no published client case yet: that is the purpose of the pilot programme.' } ] },
  faqPage: { title: 'FAQ and glossary · Sorevo', h1: 'FAQ and glossary', faqH: 'Frequently asked questions', glH: 'Glossary',
   items: [
-  { q: 'What is GEO / AEO?', a: 'It is optimising your presence for AI answer engines (ChatGPT, Gemini, Claude, Perplexity) so they understand your business and can cite it.' },
+  { q: 'What is GEO / AEO?', a: 'It is optimising your presence for AI answer engines (ChatGPT, Gemini, AI Overviews, Claude, Perplexity) so they understand your business and can cite it.' },
   { q: 'Do you guarantee a place in the answers?', a: 'No. AI answers vary by time, wording and source. We measure before and after and show you the differences, with no promise of results.' },
   { q: 'How long does it take?', a: 'The audit takes a few days, actions a few weeks, then the re-test happens 30 days after publication. Models do not all refresh their sources at the same pace.' },
   { q: 'Do I need to rebuild my site?', a: 'Not necessarily. We start with your key pages and structured data. If the site blocks everything, we tell you in the report.' },
@@ -188,8 +188,8 @@ en: {
    'Many fundamentals are shared: a clear site, precise pages, good structure, reliable sources. GEO does not replace SEO, it adds to it.',
    'What changes: more emphasis on direct answers (FAQ, definitions), on structured data, and on the consistency of your online presence, because an AI cross-checks several sources.',
    'Another difference: an AI answer is not a fixed position. It varies. Hence the value of measuring several times, before and after.' ] },
-  'self-test': { t: 'Test your own visibility in 15 minutes', d: 'A simple method to see whether ChatGPT, Gemini, Claude or Perplexity cite you.', body: [
-   'Open ChatGPT, Gemini, Claude and Perplexity, in private windows if possible, and ask each the same questions.',
+  'self-test': { t: 'Test your own visibility in 15 minutes', d: 'A simple method to see whether ChatGPT, Gemini, AI Overviews, Claude or Perplexity cite you.', body: [
+   'Open ChatGPT, Gemini, Claude and Perplexity, in private windows if possible, and ask each the same questions. Also search on Google to see whether an AI Overviews box appears.',
    '1. "Which company do you recommend for [your service] in [your city]?"',
    '2. "What are the best [your sector] companies in [your city] for an SME?"',
    '3. "What do you know about [your company name]?"',
@@ -199,7 +199,7 @@ en: {
 es: {
  htmlLang: 'es', locale: 'es_ES',
  title: 'Sorevo · Todo el mundo pregunta a la IA. Esté en la respuesta.',
- desc: 'Sorevo ayuda a las empresas a aparecer en las respuestas de ChatGPT, Gemini, Claude y Perplexity: auditoría, contenidos, datos estructurados y re-test a 30 días.',
+ desc: 'Sorevo ayuda a las empresas a aparecer en las respuestas de ChatGPT, Gemini, AI Overviews, Claude y Perplexity: auditoría, contenidos, datos estructurados y re-test a 30 días.',
  nav: { offer: 'Oferta', method: 'Método', guides: 'Guías', about: 'Nosotros', faq: 'FAQ', cta: 'Auditoría gratis' },
  hero: { label: 'VISIBILIDAD EN LAS IA', a: 'Todo el mundo pregunta a la IA. Esté ', b: 'en la respuesta', c: '.', sub: 'Sus futuros clientes ya preguntan a una IA a quién elegir. Medimos dónde está, corregimos lo que le hace invisible y repetimos exactamente las mismas pruebas 30 días después.', cta1: 'Recibir mi mini-auditoría gratis', cta2: 'Ver la oferta', disc: 'Sin garantía de resultados: las respuestas de las IA varían. Medimos antes y después.', engines: 'Probamos en' },
  s1: { n: '01', label: 'El problema', h2: 'Por qué una empresa sigue siendo invisible', items: [
@@ -208,11 +208,11 @@ es: {
   { t: 'Pocas fuentes de terceros', d: 'Las IA contrastan varias fuentes. Fichas y menciones coherentes y legítimas refuerzan su credibilidad.' } ] },
  demo: { n: '02', label: 'Pruébelo', h2: 'Cómo se ve la diferencia', d: 'Escriba su empresa y su actividad. El ejemplo de abajo muestra el tipo de cambio que buscamos.', company: 'Su empresa', activity: 'Su actividad', companyPh: 'Ej. Zara', activityPh: 'ropa y moda', before: 'Antes', after: 'Después (ejemplo)', q: '¿Qué empresa me recomiendas en este ámbito: {a}?', note: 'Ejemplo ilustrativo creado por nosotros. No es una respuesta real de una IA ni un resultado obtenido.', compA: 'Competidor A', compB: 'Competidor B', compC: 'Competidor C' },
  method: { n: '03', label: 'El método', h2: 'Tres pasos, un calendario claro', steps: [
-  { when: 'Días 1 a 5', t: 'Auditoría', d: 'Planteamos preguntas realistas de sus clientes a ChatGPT, Gemini, Claude y Perplexity. Anotamos si le citan, quién y con qué fuentes.' },
+  { when: 'Días 1 a 5', t: 'Auditoría', d: 'Planteamos preguntas realistas de sus clientes a ChatGPT, Gemini, AI Overviews, Claude y Perplexity. Anotamos si le citan, quién y con qué fuentes.' },
   { when: 'Semanas 2 a 4', t: 'Acciones', d: 'Reescritura de páginas clave, FAQ, datos estructurados y coherencia de sus fichas online. Un plan priorizado y entregables listos para publicar.' },
   { when: '30 días tras publicar', t: 'Re-test', d: 'Mismas preguntas, mismas herramientas. Recibe una comparativa antes/después: qué ha cambiado y qué falta.' } ] },
  offer: { n: '04', label: 'La oferta', h2: 'Una sola oferta, todo por escrito', intro: 'Sin menús interminables. Un paquete, un alcance claro y un entregable final. Sin compromiso de 12 meses.', price: PRICE, priceNote: 'Precio de lanzamiento, pago único. La auditoría inicial es gratuita.', incH: 'Incluido', includes: [
-  'Auditoría inicial de visibilidad: 30 preguntas probadas en ChatGPT, Gemini, Claude y Perplexity',
+  'Auditoría inicial de visibilidad: 30 preguntas probadas en ChatGPT, Gemini, AI Overviews, Claude y Perplexity',
   'Informe de partida: si le citan, quién y con qué fuentes',
   'Plan de acciones priorizado',
   'Redacción de 5 contenidos clave (página de servicio, quiénes somos, FAQ…) listos para publicar',
@@ -239,7 +239,7 @@ es: {
   { t: 'Dónde estamos', d: 'Sorevo está empezando. Aún no tenemos casos de cliente publicados: ese es el objeto del programa piloto.' } ] },
  faqPage: { title: 'FAQ y glosario · Sorevo', h1: 'FAQ y glosario', faqH: 'Preguntas frecuentes', glH: 'Glosario',
   items: [
-  { q: '¿Qué es el GEO / AEO?', a: 'Es optimizar su presencia para los motores de respuesta basados en IA (ChatGPT, Gemini, Claude, Perplexity) para que entiendan su empresa y puedan citarla.' },
+  { q: '¿Qué es el GEO / AEO?', a: 'Es optimizar su presencia para los motores de respuesta basados en IA (ChatGPT, Gemini, AI Overviews, Claude, Perplexity) para que entiendan su empresa y puedan citarla.' },
   { q: '¿Garantizan un lugar en las respuestas?', a: 'No. Las respuestas de las IA varían según el momento, la formulación y la fuente. Medimos antes y después y le mostramos las diferencias, sin prometer resultados.' },
   { q: '¿Cuánto tarda?', a: 'La auditoría lleva unos días, las acciones unas semanas y el re-test se hace 30 días después de publicar. No todos los modelos actualizan sus fuentes al mismo ritmo.' },
   { q: '¿Tengo que rehacer mi web?', a: 'No necesariamente. Empezamos por sus páginas clave y sus datos estructurados. Si la web lo bloquea todo, se lo decimos en el informe.' },
@@ -284,8 +284,8 @@ es: {
    'Muchos fundamentos son comunes: una web clara, páginas precisas, buena estructura, fuentes fiables. El GEO no sustituye al SEO, se suma a él.',
    'Lo que cambia: más énfasis en respuestas directas (FAQ, definiciones), en los datos estructurados y en la coherencia de su presencia online, porque una IA contrasta varias fuentes.',
    'Otra diferencia: una respuesta de IA no es una posición fija. Varía. De ahí el interés de medir varias veces, antes y después.' ] },
-  'self-test': { t: 'Compruebe su visibilidad usted mismo en 15 minutos', d: 'Un método sencillo para ver si ChatGPT, Gemini, Claude o Perplexity le citan.', body: [
-   'Abra ChatGPT, Gemini, Claude y Perplexity, a ser posible en ventanas privadas, y haga las mismas preguntas a cada uno.',
+  'self-test': { t: 'Compruebe su visibilidad usted mismo en 15 minutos', d: 'Un método sencillo para ver si ChatGPT, Gemini, AI Overviews, Claude o Perplexity le citan.', body: [
+   'Abra ChatGPT, Gemini, Claude y Perplexity, a ser posible en ventanas privadas, y haga las mismas preguntas a cada uno. Busque también en Google para ver si aparece un recuadro de AI Overviews.',
    '1. «¿Qué empresa me recomiendas para [su servicio] en [su ciudad]?»',
    '2. «¿Cuáles son las mejores empresas de [su sector] en [su ciudad] para una pyme?»',
    '3. «¿Qué sabes de [nombre de su empresa]?»',
