@@ -38,7 +38,7 @@ fr: {
  teaser: { n: '07', label: 'Guides', h2: 'Comprendre avant de choisir', all: 'Tous les guides' },
  faqTeaser: { n: '08', label: 'FAQ', h2: 'Questions fréquentes', all: 'Toute la FAQ et le glossaire' },
  form: { n: '09', label: 'Audit gratuit', h2: 'Recevez votre mini-audit gratuit', d: "Dites-nous qui vous êtes. Nous testons votre visibilité et revenons vers vous par e-mail.", name: 'Nom', email: 'E-mail', company: 'Entreprise', website: 'Site web (optionnel)', service: 'Votre activité', servicePh: 'Ex. : logiciel de billetterie B2B à Barcelone', consent: "J'accepte que mes données soient utilisées pour me répondre (voir mentions légales).", submit: 'Envoyer ma demande', sending: 'Envoi…', ok: 'Merci ! Nous revenons vers vous très vite.', err: "Une erreur est survenue. Réessayez ou écrivez-nous par e-mail." },
- footer: { legal: 'Mentions légales', tag: 'Visibilité dans les IA pour les PME de Barcelone.', rights: 'Tous droits réservés.', nav: 'Navigation', lang: 'Langues' },
+ footer: { privacy: 'Confidentialité', legal: 'Mentions légales', tag: 'Visibilité dans les IA pour les PME de Barcelone.', rights: 'Tous droits réservés.', nav: 'Navigation', lang: 'Langues' },
  guidesPage: { h1: 'Guides', d: "Des explications simples, sans jargon, pour comprendre la visibilité dans les IA.", read: 'Lire', updated: 'Mis à jour le', by: 'Par Jules Tommy Martin', back: 'Tous les guides' },
  about: { title: 'À propos · Sorevo', h1: 'À propos', lead: "Sorevo aide les PME de Barcelone à être comprises, et citées, par les assistants IA.", blocks: [
   { t: 'Qui', d: "Sorevo est lancé par Jules Tommy Martin, étudiant en gestion à Esade (Barcelone), français, qui travaille en français, anglais et espagnol." },
@@ -62,11 +62,22 @@ fr: {
   { q: 'schema.org', a: "Un vocabulaire standard pour décrire votre entreprise, vos services et vos questions fréquentes de façon lisible par une machine." },
   { q: 'JSON-LD', a: "Le format dans lequel on écrit ces données structurées sur une page web." },
   { q: 'Prompt', a: "La question ou consigne que l'utilisateur écrit à l'IA." } ] },
- legal: { h1: 'Mentions légales et confidentialité', blocks: [
-  { t: 'Éditeur', d: "[À COMPLÉTER : nom, statut juridique, NIF/SIRET, adresse, e-mail de contact]" },
+ legal: { h1: 'Mentions légales', blocks: [
+  { t: 'Éditeur du site', d: "Jules Tommy Martin, entrepreneur individuel (EI). Adresse : [À COMPLÉTER]. SIRET : [À COMPLÉTER]. E-mail : [À COMPLÉTER]. Directeur de la publication : Jules Tommy Martin." },
   { t: 'Hébergement', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.' },
-  { t: 'Données personnelles', d: "Le formulaire collecte votre nom, e-mail, entreprise, site web et activité, uniquement pour répondre à votre demande. Elles sont stockées chez Supabase (UE). [À COMPLÉTER : durée de conservation, responsable du traitement.] Vous pouvez demander l'accès, la rectification ou la suppression à tout moment par e-mail." },
-  { t: 'Cookies', d: "Ce site n'utilise pas de cookies de suivi." } ] },
+  { t: 'Propriété intellectuelle', d: "Les textes, le logo et la mise en page du site sont la propriété de l'éditeur. Toute reproduction sans accord écrit est interdite." },
+  { t: 'Responsabilité', d: "Le contenu du site est fourni à titre informatif. Les réponses des assistants IA varient d'une requête à l'autre : aucun résultat n'est garanti." },
+  { t: 'Contact', d: "Pour toute question, écrivez à l'adresse e-mail indiquée ci-dessus. Données personnelles : voir la page Confidentialité." } ] },
+ privacy: { h1: 'Politique de confidentialité', upd: 'Dernière mise à jour : novembre 2026', blocks: [
+  { t: '1. Responsable du traitement', d: "Jules Tommy Martin (Sorevo), entrepreneur individuel. Contact : [À COMPLÉTER : e-mail]." },
+  { t: '2. Données collectées', d: "Via le formulaire d'audit : nom, e-mail, entreprise, site web (facultatif) et description de votre activité, ainsi que la langue du site et la date de la demande." },
+  { t: '3. Base légale', d: "Votre consentement (case cochée dans le formulaire) et notre intérêt légitime à répondre à votre demande." },
+  { t: '4. Utilisation', d: "Uniquement pour répondre à votre demande d'audit et vous recontacter à ce sujet. Aucune revente, aucune publicité ciblée." },
+  { t: '5. Durée de conservation', d: "[À COMPLÉTER : par ex. 12 mois après le dernier échange.]" },
+  { t: '6. Vos droits', d: "Accès, rectification, suppression, opposition, limitation et portabilité : écrivez à l'e-mail ci-dessus. Vous pouvez aussi saisir la CNIL (cnil.fr)." },
+  { t: '7. Cookies', d: "Ce site n'utilise pas de cookies de suivi ni d'outil de mesure d'audience." },
+  { t: '8. Sous-traitants et transferts', d: "Base de données : Supabase, région UE (Paris). Hébergement du site : Vercel (États-Unis), qui peut traiter des données techniques de connexion (adresse IP)." },
+  { t: '9. Contact', d: "[À COMPLÉTER : e-mail de contact]." } ] },
  guides: {
   'choose-an-agency': { t: 'Comment choisir une agence GEO : 6 questions à poser', d: "Quelles questions poser avant de signer avec une agence de visibilité dans les IA.", body: [
    "Le GEO est un métier récent. Beaucoup d'agences l'ajoutent à leur offre sans méthode claire. Voici six questions qui permettent de trier.",
@@ -122,8 +133,8 @@ en: {
   'Sorevo is just starting: no public client case yet. That is why the pilot programme exists.' ] },
  teaser: { n: '07', label: 'Guides', h2: 'Understand before you choose', all: 'All guides' },
  faqTeaser: { n: '08', label: 'FAQ', h2: 'Frequently asked questions', all: 'Full FAQ and glossary' },
- form: { n: '09', label: 'Free audit', h2: 'Get your free mini-audit', d: 'Tell us who you are. We test your visibility and get back to you by email.', name: 'Name', email: 'Email', company: 'Company', website: 'Website (optional)', service: 'Your business', servicePh: 'E.g. B2B ticketing software in Barcelona', consent: 'I agree that my data is used to reply to me (see legal page).', submit: 'Send my request', sending: 'Sending…', ok: 'Thank you! We will get back to you shortly.', err: 'Something went wrong. Please retry or email us.' },
- footer: { legal: 'Legal notice', tag: 'AI visibility for Barcelona SMEs.', rights: 'All rights reserved.', nav: 'Navigation', lang: 'Languages' },
+ form: { n: '09', label: 'Free audit', h2: 'Get your free mini-audit', d: 'Tell us who you are. We test your visibility and get back to you by email.', name: 'Name', email: 'Email', company: 'Company', website: 'Website (optional)', service: 'Your business', servicePh: 'E.g. B2B ticketing software in Barcelona', consent: 'I agree that my data is used to reply to me (see privacy page).', submit: 'Send my request', sending: 'Sending…', ok: 'Thank you! We will get back to you shortly.', err: 'Something went wrong. Please retry or email us.' },
+ footer: { privacy: 'Privacy', legal: 'Legal notice', tag: 'AI visibility for Barcelona SMEs.', rights: 'All rights reserved.', nav: 'Navigation', lang: 'Languages' },
  guidesPage: { h1: 'Guides', d: 'Plain explanations, no jargon, to understand AI visibility.', read: 'Read', updated: 'Updated', by: 'By Jules Tommy Martin', back: 'All guides' },
  about: { title: 'About · Sorevo', h1: 'About', lead: 'Sorevo helps Barcelona SMEs get understood, and cited, by AI assistants.', blocks: [
   { t: 'Who', d: 'Sorevo is started by Jules Tommy Martin, a French business student at Esade (Barcelona), working in French, English and Spanish.' },
@@ -139,7 +150,7 @@ en: {
   { q: 'Why a single price?', a: 'To keep it readable: a written scope, one deliverable, no 12-month commitment.' },
   { q: 'Do you work with every sector?', a: 'We start with French-speaking B2B SMEs in Barcelona, then restaurants and bars. If you are elsewhere, write to us.' },
   { q: 'Do you create fake content or reviews?', a: 'Never. It would be illegal, risky for your reputation, and AI increasingly detects it.' },
-  { q: 'What do you do with my data?', a: 'Only the form data is kept, to answer your request. See the legal page.' } ],
+  { q: 'What do you do with my data?', a: 'Only the form data is kept, to answer your request. See the privacy page.' } ],
   glossary: [
   { q: 'GEO', a: 'Generative Engine Optimization: optimising your presence to be cited in AI-generated answers.' },
   { q: 'AEO', a: 'Answer Engine Optimization: the same idea, focused on engines that give a direct answer.' },
@@ -147,11 +158,22 @@ en: {
   { q: 'schema.org', a: 'A standard vocabulary to describe your business, services and FAQs in a machine-readable way.' },
   { q: 'JSON-LD', a: 'The format in which that structured data is written on a web page.' },
   { q: 'Prompt', a: 'The question or instruction a user writes to the AI.' } ] },
- legal: { h1: 'Legal notice and privacy', blocks: [
-  { t: 'Publisher', d: '[TO COMPLETE: name, legal status, tax ID, address, contact email]' },
+ legal: { h1: 'Legal notice', blocks: [
+  { t: 'Site publisher', d: 'Jules Tommy Martin, sole proprietor (EI). Address: [TO COMPLETE]. SIRET: [TO COMPLETE]. Email: [TO COMPLETE]. Publication director: Jules Tommy Martin.' },
   { t: 'Hosting', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.' },
-  { t: 'Personal data', d: 'The form collects your name, email, company, website and business, only to answer your request. It is stored with Supabase (EU). [TO COMPLETE: retention period, data controller.] You can request access, correction or deletion at any time by email.' },
-  { t: 'Cookies', d: 'This site does not use tracking cookies.' } ] },
+  { t: 'Intellectual property', d: "The site's texts, logo and layout belong to the publisher. Reproduction without written consent is prohibited." },
+  { t: 'Liability', d: 'Content is provided for information. AI assistant answers vary from one query to the next: no result is guaranteed.' },
+  { t: 'Contact', d: 'For any question, email the address above. Personal data: see the Privacy page.' } ] },
+ privacy: { h1: 'Privacy policy', upd: 'Last updated: November 2026', blocks: [
+  { t: '1. Data controller', d: 'Jules Tommy Martin (Sorevo), sole proprietor. Contact: [TO COMPLETE: email].' },
+  { t: '2. Data collected', d: 'Through the audit form: name, email, company, website (optional) and description of your business, plus the site language and request date.' },
+  { t: '3. Legal basis', d: 'Your consent (checkbox in the form) and our legitimate interest in answering your request.' },
+  { t: '4. Use', d: 'Only to answer your audit request and contact you about it. No resale, no targeted advertising.' },
+  { t: '5. Retention', d: '[TO COMPLETE: e.g. 12 months after the last exchange.]' },
+  { t: '6. Your rights', d: 'Access, rectification, deletion, objection, restriction and portability: email the address above. You may also contact your data protection authority (CNIL in France).' },
+  { t: '7. Cookies', d: 'This site uses no tracking cookies or analytics tools.' },
+  { t: '8. Processors and transfers', d: 'Database: Supabase, EU region (Paris). Site hosting: Vercel (USA), which may process technical connection data (IP address).' },
+  { t: '9. Contact', d: '[TO COMPLETE: contact email].' } ] },
  guides: {
   'choose-an-agency': { t: 'How to choose a GEO agency: 6 questions to ask', d: 'What to ask before signing with an AI visibility agency.', body: [
    'GEO is a young field. Many agencies add it to their offer without a clear method. Here are six questions that help sort them out.',
@@ -207,8 +229,8 @@ es: {
   'Sorevo está empezando: aún no hay casos de cliente públicos. Por eso existe el programa piloto.' ] },
  teaser: { n: '07', label: 'Guías', h2: 'Entender antes de elegir', all: 'Todas las guías' },
  faqTeaser: { n: '08', label: 'FAQ', h2: 'Preguntas frecuentes', all: 'FAQ completa y glosario' },
- form: { n: '09', label: 'Auditoría gratis', h2: 'Reciba su mini-auditoría gratis', d: 'Cuéntenos quién es. Probamos su visibilidad y le respondemos por correo.', name: 'Nombre', email: 'Correo electrónico', company: 'Empresa', website: 'Sitio web (opcional)', service: 'Su actividad', servicePh: 'Ej.: software de ticketing B2B en Barcelona', consent: 'Acepto que mis datos se utilicen para responderme (ver aviso legal).', submit: 'Enviar mi solicitud', sending: 'Enviando…', ok: '¡Gracias! Le responderemos muy pronto.', err: 'Ha ocurrido un error. Inténtelo de nuevo o escríbanos por correo.' },
- footer: { legal: 'Aviso legal', tag: 'Visibilidad en las IA para pymes de Barcelona.', rights: 'Todos los derechos reservados.', nav: 'Navegación', lang: 'Idiomas' },
+ form: { n: '09', label: 'Auditoría gratis', h2: 'Reciba su mini-auditoría gratis', d: 'Cuéntenos quién es. Probamos su visibilidad y le respondemos por correo.', name: 'Nombre', email: 'Correo electrónico', company: 'Empresa', website: 'Sitio web (opcional)', service: 'Su actividad', servicePh: 'Ej.: software de ticketing B2B en Barcelona', consent: 'Acepto que mis datos se utilicen para responderme (ver privacidad).', submit: 'Enviar mi solicitud', sending: 'Enviando…', ok: '¡Gracias! Le responderemos muy pronto.', err: 'Ha ocurrido un error. Inténtelo de nuevo o escríbanos por correo.' },
+ footer: { privacy: 'Privacidad', legal: 'Aviso legal', tag: 'Visibilidad en las IA para pymes de Barcelona.', rights: 'Todos los derechos reservados.', nav: 'Navegación', lang: 'Idiomas' },
  guidesPage: { h1: 'Guías', d: 'Explicaciones sencillas, sin jerga, para entender la visibilidad en las IA.', read: 'Leer', updated: 'Actualizado el', by: 'Por Jules Tommy Martin', back: 'Todas las guías' },
  about: { title: 'Nosotros · Sorevo', h1: 'Nosotros', lead: 'Sorevo ayuda a las pymes de Barcelona a ser entendidas, y citadas, por los asistentes de IA.', blocks: [
   { t: 'Quién', d: 'Sorevo lo pone en marcha Jules Tommy Martin, estudiante francés de gestión en Esade (Barcelona), que trabaja en francés, inglés y español.' },
@@ -224,7 +246,7 @@ es: {
   { q: '¿Por qué un precio único?', a: 'Para que sea claro: un alcance escrito, un entregable, sin compromiso de 12 meses.' },
   { q: '¿Trabajan con todos los sectores?', a: 'Empezamos con pymes B2B francófonas en Barcelona y después restaurantes y bares. Si su actividad es otra, escríbanos.' },
   { q: '¿Crean contenido o reseñas falsas?', a: 'Nunca. Sería ilegal, arriesgado para su reputación y las IA lo detectan cada vez más.' },
-  { q: '¿Qué hacen con mis datos?', a: 'Solo se conservan los datos del formulario para responder a su solicitud. Consulte el aviso legal.' } ],
+  { q: '¿Qué hacen con mis datos?', a: 'Solo se conservan los datos del formulario para responder a su solicitud. Consulte la página de privacidad.' } ],
   glossary: [
   { q: 'GEO', a: 'Generative Engine Optimization: optimizar su presencia para ser citado en las respuestas generadas por una IA.' },
   { q: 'AEO', a: 'Answer Engine Optimization: la misma idea, centrada en los motores que dan una respuesta directa.' },
@@ -232,11 +254,22 @@ es: {
   { q: 'schema.org', a: 'Un vocabulario estándar para describir su empresa, sus servicios y sus preguntas frecuentes de forma legible por máquinas.' },
   { q: 'JSON-LD', a: 'El formato en el que se escriben esos datos estructurados en una página web.' },
   { q: 'Prompt', a: 'La pregunta o instrucción que el usuario escribe a la IA.' } ] },
- legal: { h1: 'Aviso legal y privacidad', blocks: [
-  { t: 'Titular', d: '[POR COMPLETAR: nombre, forma jurídica, NIF, dirección, correo de contacto]' },
+ legal: { h1: 'Aviso legal', blocks: [
+  { t: 'Titular del sitio', d: 'Jules Tommy Martin, empresario individual (EI). Dirección: [POR COMPLETAR]. SIRET: [POR COMPLETAR]. Correo: [POR COMPLETAR]. Director de la publicación: Jules Tommy Martin.' },
   { t: 'Alojamiento', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, EE. UU.' },
-  { t: 'Datos personales', d: 'El formulario recoge su nombre, correo, empresa, sitio web y actividad, solo para responder a su solicitud. Se almacenan en Supabase (UE). [POR COMPLETAR: plazo de conservación, responsable del tratamiento.] Puede solicitar acceso, rectificación o supresión en cualquier momento por correo.' },
-  { t: 'Cookies', d: 'Este sitio no utiliza cookies de seguimiento.' } ] },
+  { t: 'Propiedad intelectual', d: 'Los textos, el logotipo y el diseño del sitio son propiedad del titular. Queda prohibida su reproducción sin autorización escrita.' },
+  { t: 'Responsabilidad', d: 'El contenido se ofrece a título informativo. Las respuestas de los asistentes de IA varían de una consulta a otra: no se garantiza ningún resultado.' },
+  { t: 'Contacto', d: 'Para cualquier consulta, escriba al correo indicado arriba. Datos personales: véase la página de Privacidad.' } ] },
+ privacy: { h1: 'Política de privacidad', upd: 'Última actualización: noviembre de 2026', blocks: [
+  { t: '1. Responsable del tratamiento', d: 'Jules Tommy Martin (Sorevo), empresario individual. Contacto: [POR COMPLETAR: correo].' },
+  { t: '2. Datos recogidos', d: 'A través del formulario de auditoría: nombre, correo, empresa, sitio web (opcional) y descripción de su actividad, además del idioma del sitio y la fecha de la solicitud.' },
+  { t: '3. Base jurídica', d: 'Su consentimiento (casilla del formulario) y nuestro interés legítimo en responder a su solicitud.' },
+  { t: '4. Uso', d: 'Solo para responder a su solicitud de auditoría y contactarle al respecto. Sin venta de datos ni publicidad dirigida.' },
+  { t: '5. Conservación', d: '[POR COMPLETAR: p. ej. 12 meses tras el último contacto.]' },
+  { t: '6. Sus derechos', d: 'Acceso, rectificación, supresión, oposición, limitación y portabilidad: escriba al correo indicado arriba. También puede acudir a la autoridad de protección de datos (CNIL en Francia, AEPD en España).' },
+  { t: '7. Cookies', d: 'Este sitio no utiliza cookies de seguimiento ni herramientas de analítica.' },
+  { t: '8. Encargados y transferencias', d: 'Base de datos: Supabase, región UE (París). Alojamiento del sitio: Vercel (EE. UU.), que puede tratar datos técnicos de conexión (dirección IP).' },
+  { t: '9. Contacto', d: '[POR COMPLETAR: correo de contacto].' } ] },
  guides: {
   'choose-an-agency': { t: 'Cómo elegir una agencia GEO: 6 preguntas que hacer', d: 'Qué preguntar antes de firmar con una agencia de visibilidad en IA.', body: [
    'El GEO es un oficio reciente. Muchas agencias lo añaden a su oferta sin un método claro. Aquí van seis preguntas para filtrar.',

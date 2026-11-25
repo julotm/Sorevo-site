@@ -34,7 +34,7 @@ const L = `/${lang}`;
   <div><a class="brand" href={`${L}/`} set:html={`${logo}<span>Sorevo</span>`} /><p class="mu">{c.footer.tag}</p></div>
   <div><p class="mono">{c.footer.nav}</p><a href={`${L}/#offre`}>{c.nav.offer}</a><a href={`${L}/guides/`}>{c.nav.guides}</a><a href={`${L}/about/`}>{c.nav.about}</a><a href={`${L}/faq/`}>{c.nav.faq}</a></div>
   <div><p class="mono">{c.footer.lang}</p>{langs.map(l => <a href={`/${l}/${path}`} hreflang={l}>{l.toUpperCase()}</a>)}</div>
-  <div class="fine"><a href={`${L}/legal/`}>{c.footer.legal}</a><span>© {new Date().getFullYear()} Sorevo. {c.footer.rights}</span></div>
+  <div class="fine"><a href={`${L}/legal/`}>{c.footer.legal}</a><a href={`${L}/privacy/`}>{c.footer.privacy}</a><span>© {new Date().getFullYear()} Sorevo. {c.footer.rights}</span></div>
 </div></footer>
 <style is:global>
 :root{--bg:#0B0F14;--tx:#ECEFE8;--mu:#A4AEA8;--mu2:#6B756F;--ln:#26302C;--lime:#C6F24E}

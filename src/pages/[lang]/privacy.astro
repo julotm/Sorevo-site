@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import { t, langs, type Lang } from '../../i18n/content';
+export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
+const lang = Astro.params.lang as Lang; const c = t[lang];
+---
+<Base lang={lang} path="privacy/" title={`${c.privacy.h1} · Sorevo`} desc={c.privacy.h1}>
+<section class="page"><div class="wrap art"><h1>{c.privacy.h1}</h1><p class="mu">{c.privacy.upd}</p>{c.privacy.blocks.map((b: any) => <><h3 style="margin:28px 0 8px;font-size:26px">{b.t}</h3><p class="mu">{b.d}</p></>)}</div></section>
+</Base>
