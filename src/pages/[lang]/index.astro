@@ -45,16 +45,6 @@ const Sec = ({ s }: any) => s;
   <div class="two"><div><p class="lab">{c.pilot.give}</p><ul class="ticks">{c.pilot.gives.map((i: string) => <li>{i}</li>)}</ul></div><div><p class="lab">{c.pilot.get}</p><ul class="ticks">{c.pilot.gets.map((i: string) => <li>{i}</li>)}</ul></div></div>
   <a class="btn" href="#audit">{c.pilot.cta}</a></div></div></section>
 
-<section class="sec"><div class="wrap grid"><p class="lab">{c.limits.n} — {c.limits.label}</p><div><h2>{c.limits.h2}</h2><ul class="ticks no">{c.limits.items.map((i: string) => <li>{i}</li>)}</ul></div></div></section>
-
-<section class="sec"><div class="wrap grid"><p class="lab">{c.teaser.n} — {c.teaser.label}</p><div><h2>{c.teaser.h2}</h2>
-  <div class="cards">{slugs.map((s, k) => <a href={`${L}/guides/${s}/`}><span class="num mono">0{k + 1}</span><h3>{c.guides[s].t}</h3><p>{c.guides[s].d}</p></a>)}</div>
-  <p style="margin-top:28px"><a class="lnk" href={`${L}/guides/`}>{c.teaser.all} →</a></p></div></div></section>
-
-<section class="sec"><div class="wrap grid"><p class="lab">{c.faqTeaser.n} — {c.faqTeaser.label}</p><div><h2>{c.faqTeaser.h2}</h2>
-  {c.faqPage.items.slice(0, 4).map((i: any) => <details><summary>{i.q}</summary><p>{i.a}</p></details>)}
-  <p style="margin-top:28px"><a class="lnk" href={`${L}/faq/`}>{c.faqTeaser.all} →</a></p></div></div></section>
-
 <section class="sec" id="audit"><div class="wrap grid"><p class="lab">{c.form.n} — {c.form.label}</p><div><h2>{c.form.h2}</h2><p class="mu" style="margin:-16px 0 32px">{c.form.d}</p>
   <form id="f" data-url={url} data-key={key} data-lang={lang} data-ok={c.form.ok} data-err={c.form.err} data-sending={c.form.sending} data-submit={c.form.submit}>
     <label>{c.form.name}<input name="name" required maxlength="120" autocomplete="name" /></label>
