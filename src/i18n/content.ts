@@ -38,7 +38,7 @@ fr: {
  teaser: { n: '07', label: 'Guides', h2: 'Comprendre avant de choisir', all: 'Tous les guides' },
  faqTeaser: { n: '08', label: 'FAQ', h2: 'Questions fréquentes', all: 'Toute la FAQ et le glossaire' },
  form: { n: '06', label: 'Audit gratuit', h2: 'Recevez votre mini-audit gratuit', d: "Dites-nous qui vous êtes. Nous testons votre visibilité et revenons vers vous par e-mail.", name: 'Nom', email: 'E-mail', company: 'Entreprise', website: 'Site web (optionnel)', service: 'Votre activité', servicePh: 'Ex. : logiciel de billetterie B2B à Barcelone', consent: "J'accepte que mes données soient utilisées pour me répondre (voir mentions légales).", submit: 'Envoyer ma demande', sending: 'Envoi…', ok: 'Merci ! Nous revenons vers vous très vite.', err: "Une erreur est survenue. Réessayez ou écrivez-nous par e-mail." },
- footer: { privacy: 'Confidentialité', legal: 'Mentions légales', tag: 'Visibilité dans les IA, mesurée avant et après.', rights: 'Tous droits réservés.', nav: 'Navigation', lang: 'Langues' },
+ footer: { privacy: 'Confidentialité', legal: 'Mentions légales', tag: "Tout le monde demande à l'IA. Soyez dans la réponse.", rights: 'Tous droits réservés.', nav: 'Navigation', lang: 'Langues' },
  guidesPage: { h1: 'Guides', d: "Des explications simples, sans jargon, pour comprendre la visibilité dans les IA.", read: 'Lire', updated: 'Mis à jour le', by: 'Par Jules Tommy Martin', back: 'Tous les guides' },
  about: { title: 'À propos · Sorevo', h1: 'À propos', lead: "Sorevo aide les entreprises à être comprises, et citées, par les assistants IA.", blocks: [
   { t: 'Qui', d: "Sorevo est lancé par Jules Tommy Martin, étudiant en gestion à Esade (Barcelone), français, qui travaille en français, anglais et espagnol." },
@@ -94,8 +94,8 @@ fr: {
    "Autre différence : une réponse d'IA n'est pas une position fixe. Elle varie. D'où l'intérêt de mesurer plusieurs fois, avant et après." ] },
   'self-test': { t: 'Testez vous-même votre visibilité en 15 minutes', d: "Une méthode simple pour voir si ChatGPT, Gemini, Claude ou Perplexity vous citent.", body: [
    "Ouvrez ChatGPT, Gemini, Claude et Perplexity dans des fenêtres de navigation privée si possible, et posez les mêmes questions à chacun.",
-   "1. « Quelle entreprise me recommandes-tu pour [votre service] à Barcelone ? »",
-   "2. « Quelles sont les meilleures entreprises de [votre secteur] à Barcelone pour une PME ? »",
+   "1. « Quelle entreprise me recommandes-tu pour [votre service] à [votre ville] ? »",
+   "2. « Quelles sont les meilleures entreprises de [votre secteur] à [votre ville] pour une PME ? »",
    "3. « Que sais-tu de [nom de votre entreprise] ? »",
    "4. « Compare [votre entreprise] et [un concurrent]. »",
    "Notez dans un tableau : êtes-vous cité, à quelle place, quelles sources l'IA affiche, et si les informations sont exactes. Refaites le test dans une semaine : les réponses bougent. C'est exactement ce que fait notre audit, en plus complet." ] } }
@@ -134,7 +134,7 @@ en: {
  teaser: { n: '07', label: 'Guides', h2: 'Understand before you choose', all: 'All guides' },
  faqTeaser: { n: '08', label: 'FAQ', h2: 'Frequently asked questions', all: 'Full FAQ and glossary' },
  form: { n: '06', label: 'Free audit', h2: 'Get your free mini-audit', d: 'Tell us who you are. We test your visibility and get back to you by email.', name: 'Name', email: 'Email', company: 'Company', website: 'Website (optional)', service: 'Your business', servicePh: 'E.g. B2B ticketing software in Barcelona', consent: 'I agree that my data is used to reply to me (see privacy page).', submit: 'Send my request', sending: 'Sending…', ok: 'Thank you! We will get back to you shortly.', err: 'Something went wrong. Please retry or email us.' },
- footer: { privacy: 'Privacy', legal: 'Legal notice', tag: 'AI visibility, measured before and after.', rights: 'All rights reserved.', nav: 'Navigation', lang: 'Languages' },
+ footer: { privacy: 'Privacy', legal: 'Legal notice', tag: 'Everyone asks AI. Be in the answer.', rights: 'All rights reserved.', nav: 'Navigation', lang: 'Languages' },
  guidesPage: { h1: 'Guides', d: 'Plain explanations, no jargon, to understand AI visibility.', read: 'Read', updated: 'Updated', by: 'By Jules Tommy Martin', back: 'All guides' },
  about: { title: 'About · Sorevo', h1: 'About', lead: 'Sorevo helps businesses get understood, and cited, by AI assistants.', blocks: [
   { t: 'Who', d: 'Sorevo is started by Jules Tommy Martin, a French business student at Esade (Barcelona), working in French, English and Spanish.' },
@@ -190,8 +190,8 @@ en: {
    'Another difference: an AI answer is not a fixed position. It varies. Hence the value of measuring several times, before and after.' ] },
   'self-test': { t: 'Test your own visibility in 15 minutes', d: 'A simple method to see whether ChatGPT, Gemini, Claude or Perplexity cite you.', body: [
    'Open ChatGPT, Gemini, Claude and Perplexity, in private windows if possible, and ask each the same questions.',
-   '1. "Which company do you recommend for [your service] in Barcelona?"',
-   '2. "What are the best [your sector] companies in Barcelona for an SME?"',
+   '1. "Which company do you recommend for [your service] in [your city]?"',
+   '2. "What are the best [your sector] companies in [your city] for an SME?"',
    '3. "What do you know about [your company name]?"',
    '4. "Compare [your company] and [a competitor]."',
    'Note in a table: are you cited, at what position, which sources the AI shows, and whether the information is accurate. Repeat the test in a week: answers move. That is exactly what our audit does, in more depth.' ] } }
@@ -230,7 +230,7 @@ es: {
  teaser: { n: '07', label: 'Guías', h2: 'Entender antes de elegir', all: 'Todas las guías' },
  faqTeaser: { n: '08', label: 'FAQ', h2: 'Preguntas frecuentes', all: 'FAQ completa y glosario' },
  form: { n: '06', label: 'Auditoría gratis', h2: 'Reciba su mini-auditoría gratis', d: 'Cuéntenos quién es. Probamos su visibilidad y le respondemos por correo.', name: 'Nombre', email: 'Correo electrónico', company: 'Empresa', website: 'Sitio web (opcional)', service: 'Su actividad', servicePh: 'Ej.: software de ticketing B2B en Barcelona', consent: 'Acepto que mis datos se utilicen para responderme (ver privacidad).', submit: 'Enviar mi solicitud', sending: 'Enviando…', ok: '¡Gracias! Le responderemos muy pronto.', err: 'Ha ocurrido un error. Inténtelo de nuevo o escríbanos por correo.' },
- footer: { privacy: 'Privacidad', legal: 'Aviso legal', tag: 'Visibilidad en las IA, medida antes y después.', rights: 'Todos los derechos reservados.', nav: 'Navegación', lang: 'Idiomas' },
+ footer: { privacy: 'Privacidad', legal: 'Aviso legal', tag: 'Todo el mundo pregunta a la IA. Esté en la respuesta.', rights: 'Todos los derechos reservados.', nav: 'Navegación', lang: 'Idiomas' },
  guidesPage: { h1: 'Guías', d: 'Explicaciones sencillas, sin jerga, para entender la visibilidad en las IA.', read: 'Leer', updated: 'Actualizado el', by: 'Por Jules Tommy Martin', back: 'Todas las guías' },
  about: { title: 'Nosotros · Sorevo', h1: 'Nosotros', lead: 'Sorevo ayuda a las empresas a ser entendidas, y citadas, por los asistentes de IA.', blocks: [
   { t: 'Quién', d: 'Sorevo lo pone en marcha Jules Tommy Martin, estudiante francés de gestión en Esade (Barcelona), que trabaja en francés, inglés y español.' },
@@ -286,8 +286,8 @@ es: {
    'Otra diferencia: una respuesta de IA no es una posición fija. Varía. De ahí el interés de medir varias veces, antes y después.' ] },
   'self-test': { t: 'Compruebe su visibilidad usted mismo en 15 minutos', d: 'Un método sencillo para ver si ChatGPT, Gemini, Claude o Perplexity le citan.', body: [
    'Abra ChatGPT, Gemini, Claude y Perplexity, a ser posible en ventanas privadas, y haga las mismas preguntas a cada uno.',
-   '1. «¿Qué empresa me recomiendas para [su servicio] en Barcelona?»',
-   '2. «¿Cuáles son las mejores empresas de [su sector] en Barcelona para una pyme?»',
+   '1. «¿Qué empresa me recomiendas para [su servicio] en [su ciudad]?»',
+   '2. «¿Cuáles son las mejores empresas de [su sector] en [su ciudad] para una pyme?»',
    '3. «¿Qué sabes de [nombre de su empresa]?»',
    '4. «Compara [su empresa] y [un competidor].»',
    'Anote en una tabla: si le citan, en qué posición, qué fuentes muestra la IA y si la información es correcta. Repita la prueba en una semana: las respuestas se mueven. Es exactamente lo que hace nuestra auditoría, con más profundidad.' ] } }
