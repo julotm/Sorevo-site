@@ -15,9 +15,10 @@ fr: {
   { t: 'Aucune donnée structurée', d: "Sans balisage schema.org, votre entreprise, vos services et votre zone d'activité restent ambigus pour une machine." },
   { t: 'Peu de sources tierces', d: "Les IA recoupent plusieurs sources. Des fiches et mentions cohérentes et légitimes renforcent votre crédibilité." } ] },
  demo: { n: '02', label: 'Essayez', h2: "À quoi ressemble la différence", d: "Saisissez votre entreprise et votre activité. L'exemple ci-dessous montre le type de changement que nous cherchons à obtenir.", company: 'Votre entreprise', activity: 'Votre activité', companyPh: 'Ex. Zara', activityPh: 'vêtements et mode', before: 'Avant', after: 'Après (exemple)', q: 'Quelle entreprise me recommandes-tu dans ce domaine : {a} ?', note: "Exemple illustratif construit par nous. Ce n'est ni une vraie réponse d'IA ni un résultat obtenu.", compA: 'Concurrent A', compB: 'Concurrent B', compC: 'Concurrent C' },
- method: { n: '03', label: 'La méthode', h2: 'Trois étapes, un calendrier clair', steps: [
+ method: { n: '03', label: 'La méthode', h2: 'Quatre étapes, un calendrier clair', steps: [
   { when: 'Jours 1 à 5', t: 'Audit', d: "Nous posons des questions réalistes de vos clients à ChatGPT, Gemini, AI Overviews, Claude et Perplexity. Nous notons si vous êtes cité, par qui, avec quelles sources." },
   { when: 'Semaines 2 à 4', t: 'Actions', d: "Réécriture des pages clés, FAQ, données structurées, cohérence de vos fiches en ligne. Un plan priorisé, des livrables prêts à publier." },
+  { when: "Après publication, jusqu'à J+14", t: "Point d'étape", d: "Nous vérifions que vos pages sont en ligne et lisibles par les robots, puis nous refaisons un mini-test. Vous savez ce qui a déjà bougé et ce qui n'a pas encore d'effet." },
   { when: '30 jours après publication', t: 'Re-test', d: "Mêmes questions, mêmes outils. Vous recevez un comparatif avant/après : ce qui a bougé, ce qui reste à faire." } ] },
  offer: { n: '04', label: "L'offre", h2: 'Une seule offre, tout est écrit', intro: "Pas de menu à rallonge. Un forfait, un périmètre clair, un livrable à la fin. Pas d'engagement de 12 mois.", price: PRICE, priceNote: "Prix de lancement, paiement unique. L'audit de départ est gratuit.", incH: 'Inclus', includes: [
   "Audit de visibilité initial : 30 questions testées sur ChatGPT, Gemini, AI Overviews, Claude et Perplexity",
@@ -26,7 +27,7 @@ fr: {
   "Rédaction de 5 contenus clés (page service, à propos, FAQ…) prêts à publier",
   "Données structurées schema.org prêtes à intégrer",
   "Liste de fiches et annuaires légitimes pertinents pour votre activité",
-  "Re-test à 30 jours et rapport comparatif avant/après" ],
+  "Point d'étape à J+14 après publication", "Re-test à 30 jours et rapport comparatif avant/après" ],
   notH: 'Non inclus, jamais', not: ["Acheter de faux avis ou publier de faux messages sur des forums", "Poster à votre place sans votre accord"],
   clientH: 'De votre côté', client: ["Publier les contenus sur votre site (ou nous donner l'accès pour le faire)", "Valider les informations factuelles sur votre entreprise", "Nous répondre sous 3 jours ouvrés pendant les 30 jours"], cta: 'Commencer par le mini-audit gratuit' },
  pilot: { n: '05', label: 'Programme pilote', h2: 'Nous cherchons nos premiers cas, honnêtement', d: "Sorevo est nouveau et n'a pas encore de cas client publié. Nous ouvrons 2 à 3 audits complets gratuits à des PME de Barcelone.", give: 'Vous recevez', gives: ["Un audit complet offert", "Un plan d'actions concret", "Un re-test à 30 jours"], get: 'Nous demandons', gets: ["Un témoignage honnête, positif ou non", "L'accord de citer les résultats mesurés (anonymisés si vous préférez)"], cta: 'Candidater au programme pilote' },
@@ -111,9 +112,10 @@ en: {
   { t: 'No structured data', d: 'Without schema.org markup, your company, services and service area stay ambiguous to a machine.' },
   { t: 'Few third-party sources', d: 'AI cross-checks sources. Consistent, legitimate listings and mentions build credibility.' } ] },
  demo: { n: '02', label: 'Try it', h2: 'What the difference looks like', d: 'Enter your company and your business. The example below shows the kind of change we aim for.', company: 'Your company', activity: 'Your business', companyPh: 'E.g. Zara', activityPh: 'clothing and fashion', before: 'Before', after: 'After (example)', q: 'Which company do you recommend in this field: {a}?', note: 'Illustrative example built by us. It is not a real AI answer nor an achieved result.', compA: 'Competitor A', compB: 'Competitor B', compC: 'Competitor C' },
- method: { n: '03', label: 'The method', h2: 'Three steps, a clear timeline', steps: [
+ method: { n: '03', label: 'The method', h2: 'Four steps, a clear timeline', steps: [
   { when: 'Days 1 to 5', t: 'Audit', d: 'We ask realistic customer questions to ChatGPT, Gemini, AI Overviews, Claude and Perplexity. We record whether you are cited, by whom, from which sources.' },
   { when: 'Weeks 2 to 4', t: 'Actions', d: 'Rewritten key pages, FAQ, structured data, consistent online listings. A prioritised plan and ready-to-publish deliverables.' },
+  { when: 'After publication, up to day 14', t: 'Checkpoint', d: 'We check that your pages are live and readable by crawlers, then rerun a mini-test. You see what has already moved and what has no effect yet.' },
   { when: '30 days after publication', t: 'Re-test', d: 'Same questions, same tools. You get a before/after comparison: what moved and what is left to do.' } ] },
  offer: { n: '04', label: 'The offer', h2: 'One offer, everything written down', intro: 'No endless menu. One package, a clear scope, one deliverable at the end. No 12-month commitment.', price: PRICE, priceNote: 'Launch price, one-off payment. The starting audit is free.', incH: 'Included', includes: [
   'Initial visibility audit: 30 questions tested on ChatGPT, Gemini, AI Overviews, Claude and Perplexity',
@@ -122,7 +124,7 @@ en: {
   '5 key content pieces written (service page, about, FAQ…) ready to publish',
   'schema.org structured data ready to integrate',
   'List of legitimate listings and directories relevant to your business',
-  '30-day re-test and before/after comparison report' ],
+  'Checkpoint at day 14 after publication', '30-day re-test and before/after comparison report' ],
   notH: 'Never included', not: ['Buying fake reviews or posting fake messages on forums', 'Posting on your behalf without your approval'],
   clientH: 'On your side', client: ['Publish the content on your site (or give us access to do it)', 'Validate factual information about your business', 'Reply within 3 working days during the 30 days'], cta: 'Start with the free mini-audit' },
  pilot: { n: '05', label: 'Pilot programme', h2: 'We are looking for our first cases, honestly', d: 'Sorevo is new and has no published client case yet. We are opening 2 to 3 free full audits to Barcelona SMEs.', give: 'You get', gives: ['A full audit, free', 'A concrete action plan', 'A 30-day re-test'], get: 'We ask', gets: ['An honest testimonial, positive or not', 'Permission to cite the measured results (anonymised if you prefer)'], cta: 'Apply to the pilot' },
@@ -207,9 +209,10 @@ es: {
   { t: 'Sin datos estructurados', d: 'Sin marcado schema.org, su empresa, sus servicios y su zona de actividad quedan ambiguos para una máquina.' },
   { t: 'Pocas fuentes de terceros', d: 'Las IA contrastan varias fuentes. Fichas y menciones coherentes y legítimas refuerzan su credibilidad.' } ] },
  demo: { n: '02', label: 'Pruébelo', h2: 'Cómo se ve la diferencia', d: 'Escriba su empresa y su actividad. El ejemplo de abajo muestra el tipo de cambio que buscamos.', company: 'Su empresa', activity: 'Su actividad', companyPh: 'Ej. Zara', activityPh: 'ropa y moda', before: 'Antes', after: 'Después (ejemplo)', q: '¿Qué empresa me recomiendas en este ámbito: {a}?', note: 'Ejemplo ilustrativo creado por nosotros. No es una respuesta real de una IA ni un resultado obtenido.', compA: 'Competidor A', compB: 'Competidor B', compC: 'Competidor C' },
- method: { n: '03', label: 'El método', h2: 'Tres pasos, un calendario claro', steps: [
+ method: { n: '03', label: 'El método', h2: 'Cuatro pasos, un calendario claro', steps: [
   { when: 'Días 1 a 5', t: 'Auditoría', d: 'Planteamos preguntas realistas de sus clientes a ChatGPT, Gemini, AI Overviews, Claude y Perplexity. Anotamos si le citan, quién y con qué fuentes.' },
   { when: 'Semanas 2 a 4', t: 'Acciones', d: 'Reescritura de páginas clave, FAQ, datos estructurados y coherencia de sus fichas online. Un plan priorizado y entregables listos para publicar.' },
+  { when: 'Tras publicar, hasta el día 14', t: 'Punto de control', d: 'Comprobamos que sus páginas están en línea y son legibles para los rastreadores, y repetimos una mini-prueba. Verá qué ha cambiado ya y qué aún no tiene efecto.' },
   { when: '30 días tras publicar', t: 'Re-test', d: 'Mismas preguntas, mismas herramientas. Recibe una comparativa antes/después: qué ha cambiado y qué falta.' } ] },
  offer: { n: '04', label: 'La oferta', h2: 'Una sola oferta, todo por escrito', intro: 'Sin menús interminables. Un paquete, un alcance claro y un entregable final. Sin compromiso de 12 meses.', price: PRICE, priceNote: 'Precio de lanzamiento, pago único. La auditoría inicial es gratuita.', incH: 'Incluido', includes: [
   'Auditoría inicial de visibilidad: 30 preguntas probadas en ChatGPT, Gemini, AI Overviews, Claude y Perplexity',
@@ -218,7 +221,7 @@ es: {
   'Redacción de 5 contenidos clave (página de servicio, quiénes somos, FAQ…) listos para publicar',
   'Datos estructurados schema.org listos para integrar',
   'Lista de fichas y directorios legítimos relevantes para su actividad',
-  'Re-test a 30 días e informe comparativo antes/después' ],
+  'Punto de control al día 14 tras publicar', 'Re-test a 30 días e informe comparativo antes/después' ],
   notH: 'Nunca incluido', not: ['Comprar reseñas falsas o publicar mensajes falsos en foros', 'Publicar en su nombre sin su acuerdo'],
   clientH: 'Por su parte', client: ['Publicar los contenidos en su web (o darnos acceso para hacerlo)', 'Validar la información factual sobre su empresa', 'Responder en 3 días laborables durante los 30 días'], cta: 'Empezar con la mini-auditoría gratis' },
  pilot: { n: '05', label: 'Programa piloto', h2: 'Buscamos nuestros primeros casos, con honestidad', d: 'Sorevo es nuevo y aún no tiene casos de cliente publicados. Abrimos 2 o 3 auditorías completas gratuitas a pymes de Barcelona.', give: 'Usted recibe', gives: ['Una auditoría completa gratuita', 'Un plan de acciones concreto', 'Un re-test a 30 días'], get: 'Pedimos', gets: ['Un testimonio honesto, positivo o no', 'Permiso para citar los resultados medidos (anonimizados si lo prefiere)'], cta: 'Solicitar plaza en el piloto' },
