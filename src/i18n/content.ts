@@ -68,13 +68,13 @@ fr: {
   { q: 'JSON-LD', a: "Le format dans lequel on écrit ces données structurées sur une page web." },
   { q: 'Prompt', a: "La question ou consigne que l'utilisateur écrit à l'IA." } ] },
  legal: { h1: 'Mentions légales', blocks: [
-  { t: 'Éditeur du site', d: "Jules Tommy Martin, entrepreneur individuel (EI). Adresse : [À COMPLÉTER]. SIRET : [À COMPLÉTER]. E-mail : [À COMPLÉTER]. Directeur de la publication : Jules Tommy Martin." },
+  { t: 'Éditeur du site', d: "Jules Tommy Martin, entrepreneur individuel (EI). Adresse : [À COMPLÉTER]. SIRET : [À COMPLÉTER]. E-mail : contact@sorevo.eu. Directeur de la publication : Jules Tommy Martin." },
   { t: 'Hébergement', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.' },
   { t: 'Propriété intellectuelle', d: "Les textes, le logo et la mise en page du site sont la propriété de l'éditeur. Toute reproduction sans accord écrit est interdite." },
   { t: 'Responsabilité', d: "Le contenu du site est fourni à titre informatif. Les réponses des assistants IA varient d'une requête à l'autre : aucun résultat n'est garanti." },
   { t: 'Contact', d: "Pour toute question, écrivez à l'adresse e-mail indiquée ci-dessus. Données personnelles : voir la page Confidentialité." } ] },
  privacy: { h1: 'Politique de confidentialité', upd: 'Dernière mise à jour : novembre 2026', blocks: [
-  { t: '1. Responsable du traitement', d: "Jules Tommy Martin (Sorevo), entrepreneur individuel. Contact : [À COMPLÉTER : e-mail]." },
+  { t: '1. Responsable du traitement', d: "Jules Tommy Martin (Sorevo), entrepreneur individuel. Contact : contact@sorevo.eu." },
   { t: '2. Données collectées', d: "Via le formulaire d'audit : nom, e-mail, entreprise, site web (facultatif) et description de votre activité, ainsi que la langue du site et la date de la demande." },
   { t: '3. Base légale', d: "Votre consentement (case cochée dans le formulaire) et notre intérêt légitime à répondre à votre demande." },
   { t: '4. Utilisation', d: "Uniquement pour répondre à votre demande d'audit et vous recontacter à ce sujet. Aucune revente, aucune publicité ciblée." },
@@ -82,7 +82,7 @@ fr: {
   { t: '6. Vos droits', d: "Accès, rectification, suppression, opposition, limitation et portabilité : écrivez à l'e-mail ci-dessus. Vous pouvez aussi saisir la CNIL (cnil.fr)." },
   { t: '7. Cookies', d: "Ce site n'utilise pas de cookies de suivi ni d'outil de mesure d'audience." },
   { t: '8. Sous-traitants et transferts', d: "Base de données : Supabase, région UE (Paris). Hébergement du site : Vercel (États-Unis), qui peut traiter des données techniques de connexion (adresse IP)." },
-  { t: '9. Contact', d: "[À COMPLÉTER : e-mail de contact]." } ] },
+  { t: '9. Contact', d: "contact@sorevo.eu" } ] },
  guides: {
   'choose-an-agency': { t: 'Comment choisir une agence GEO : 6 questions à poser', d: "Quelles questions poser avant de signer avec une agence de visibilité dans les IA.", body: [
    "Le GEO est un métier récent. Beaucoup d'agences l'ajoutent à leur offre sans méthode claire. Voici six questions qui permettent de trier.",
@@ -169,13 +169,13 @@ en: {
   { q: 'JSON-LD', a: 'The format in which that structured data is written on a web page.' },
   { q: 'Prompt', a: 'The question or instruction a user writes to the AI.' } ] },
  legal: { h1: 'Legal notice', blocks: [
-  { t: 'Site publisher', d: 'Jules Tommy Martin, sole proprietor (EI). Address: [TO COMPLETE]. SIRET: [TO COMPLETE]. Email: [TO COMPLETE]. Publication director: Jules Tommy Martin.' },
+  { t: 'Site publisher', d: 'Jules Tommy Martin, sole proprietor (EI). Address: [TO COMPLETE]. SIRET: [TO COMPLETE]. Email: contact@sorevo.eu. Publication director: Jules Tommy Martin.' },
   { t: 'Hosting', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA.' },
   { t: 'Intellectual property', d: "The site's texts, logo and layout belong to the publisher. Reproduction without written consent is prohibited." },
   { t: 'Liability', d: 'Content is provided for information. AI assistant answers vary from one query to the next: no result is guaranteed.' },
   { t: 'Contact', d: 'For any question, email the address above. Personal data: see the Privacy page.' } ] },
  privacy: { h1: 'Privacy policy', upd: 'Last updated: November 2026', blocks: [
-  { t: '1. Data controller', d: 'Jules Tommy Martin (Sorevo), sole proprietor. Contact: [TO COMPLETE: email].' },
+  { t: '1. Data controller', d: 'Jules Tommy Martin (Sorevo), sole proprietor. Contact: contact@sorevo.eu.' },
   { t: '2. Data collected', d: 'Through the audit form: name, email, company, website (optional) and description of your business, plus the site language and request date.' },
   { t: '3. Legal basis', d: 'Your consent (checkbox in the form) and our legitimate interest in answering your request.' },
   { t: '4. Use', d: 'Only to answer your audit request and contact you about it. No resale, no targeted advertising.' },
@@ -183,7 +183,7 @@ en: {
   { t: '6. Your rights', d: 'Access, rectification, deletion, objection, restriction and portability: email the address above. You may also contact your data protection authority (CNIL in France).' },
   { t: '7. Cookies', d: 'This site uses no tracking cookies or analytics tools.' },
   { t: '8. Processors and transfers', d: 'Database: Supabase, EU region (Paris). Site hosting: Vercel (USA), which may process technical connection data (IP address).' },
-  { t: '9. Contact', d: '[TO COMPLETE: contact email].' } ] },
+  { t: '9. Contact', d: 'contact@sorevo.eu' } ] },
  guides: {
   'choose-an-agency': { t: 'How to choose a GEO agency: 6 questions to ask', d: 'What to ask before signing with an AI visibility agency.', body: [
    'GEO is a young field. Many agencies add it to their offer without a clear method. Here are six questions that help sort them out.',
@@ -270,13 +270,13 @@ es: {
   { q: 'JSON-LD', a: 'El formato en el que se escriben esos datos estructurados en una página web.' },
   { q: 'Prompt', a: 'La pregunta o instrucción que el usuario escribe a la IA.' } ] },
  legal: { h1: 'Aviso legal', blocks: [
-  { t: 'Titular del sitio', d: 'Jules Tommy Martin, empresario individual (EI). Dirección: [POR COMPLETAR]. SIRET: [POR COMPLETAR]. Correo: [POR COMPLETAR]. Director de la publicación: Jules Tommy Martin.' },
+  { t: 'Titular del sitio', d: 'Jules Tommy Martin, empresario individual (EI). Dirección: [POR COMPLETAR]. SIRET: [POR COMPLETAR]. Correo: contact@sorevo.eu. Director de la publicación: Jules Tommy Martin.' },
   { t: 'Alojamiento', d: 'Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, EE. UU.' },
   { t: 'Propiedad intelectual', d: 'Los textos, el logotipo y el diseño del sitio son propiedad del titular. Queda prohibida su reproducción sin autorización escrita.' },
   { t: 'Responsabilidad', d: 'El contenido se ofrece a título informativo. Las respuestas de los asistentes de IA varían de una consulta a otra: no se garantiza ningún resultado.' },
   { t: 'Contacto', d: 'Para cualquier consulta, escriba al correo indicado arriba. Datos personales: véase la página de Privacidad.' } ] },
  privacy: { h1: 'Política de privacidad', upd: 'Última actualización: noviembre de 2026', blocks: [
-  { t: '1. Responsable del tratamiento', d: 'Jules Tommy Martin (Sorevo), empresario individual. Contacto: [POR COMPLETAR: correo].' },
+  { t: '1. Responsable del tratamiento', d: 'Jules Tommy Martin (Sorevo), empresario individual. Contacto: contact@sorevo.eu.' },
   { t: '2. Datos recogidos', d: 'A través del formulario de auditoría: nombre, correo, empresa, sitio web (opcional) y descripción de su actividad, además del idioma del sitio y la fecha de la solicitud.' },
   { t: '3. Base jurídica', d: 'Su consentimiento (casilla del formulario) y nuestro interés legítimo en responder a su solicitud.' },
   { t: '4. Uso', d: 'Solo para responder a su solicitud de auditoría y contactarle al respecto. Sin venta de datos ni publicidad dirigida.' },
@@ -284,7 +284,7 @@ es: {
   { t: '6. Sus derechos', d: 'Acceso, rectificación, supresión, oposición, limitación y portabilidad: escriba al correo indicado arriba. También puede acudir a la autoridad de protección de datos (CNIL en Francia, AEPD en España).' },
   { t: '7. Cookies', d: 'Este sitio no utiliza cookies de seguimiento ni herramientas de analítica.' },
   { t: '8. Encargados y transferencias', d: 'Base de datos: Supabase, región UE (París). Alojamiento del sitio: Vercel (EE. UU.), que puede tratar datos técnicos de conexión (dirección IP).' },
-  { t: '9. Contacto', d: '[POR COMPLETAR: correo de contacto].' } ] },
+  { t: '9. Contacto', d: 'contact@sorevo.eu' } ] },
  guides: {
   'choose-an-agency': { t: 'Cómo elegir una agencia GEO: 6 preguntas que hacer', d: 'Qué preguntar antes de firmar con una agencia de visibilidad en IA.', body: [
    'El GEO es un oficio reciente. Muchas agencias lo añaden a su oferta sin un método claro. Aquí van seis preguntas para filtrar.',

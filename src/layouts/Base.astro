@@ -1,7 +1,7 @@
 ---
 import { t, langs, type Lang } from '../i18n/content';
 const { lang, path = '', title, desc, jsonld = [], og = 'website' } = Astro.props as { lang: Lang; path?: string; title: string; desc: string; jsonld?: object[]; og?: string };
-const base = 'https://sorevo.vercel.app';
+const base = 'https://sorevo.eu';
 const c = t[lang];
 const logo = `<svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M25 7H13.5A4.5 4.5 0 0 0 13.5 16H18.5A4.5 4.5 0 0 1 18.5 25H7" fill="none" stroke="#C6F24E" stroke-width="3.2"/></svg>`;
 const L = `/${lang}`;

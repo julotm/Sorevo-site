@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { t, langs, slugs, type Lang } from '../../i18n/content';
 export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
 const lang = Astro.params.lang as Lang;
-const c = t[lang]; const L = `/${lang}`; const base = 'https://sorevo.vercel.app';
+const c = t[lang]; const L = `/${lang}`; const base = 'https://sorevo.eu';
 const jsonld = [
   { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'Sorevo', url: `${base}/${lang}/`, description: c.desc, areaServed: { '@type': 'City', name: 'Barcelona' }, knowsLanguage: ['fr', 'en', 'es'], serviceType: 'Generative Engine Optimization (GEO/AEO)' },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqPage.items.slice(0, 4).map((i: any) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },

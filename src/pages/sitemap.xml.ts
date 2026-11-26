@@ -1,5 +1,5 @@
 import { slugs } from '../i18n/content';
-const base = 'https://sorevo.vercel.app';
+const base = 'https://sorevo.eu';
 export function GET() {
   const langs = ['fr', 'en', 'es'];
   const paths = ['', 'about/', 'faq/', 'guides/', 'legal/', 'privacy/', ...slugs.map(s => `guides/${s}/`)];
