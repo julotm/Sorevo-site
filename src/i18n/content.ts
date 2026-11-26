@@ -12,10 +12,10 @@ fr: {
  hero: { label: 'VISIBILITÉ DANS LES IA', a: "Tout le monde demande à l'IA. Soyez ", b: 'dans la réponse', c: '.', sub: "Vos futurs clients demandent déjà à une IA qui choisir. Nous mesurons où vous en êtes, corrigeons ce qui vous rend invisible, puis refaisons exactement les mêmes tests 30 jours plus tard.", cta1: 'Recevoir mon mini-audit gratuit', cta2: "Voir l'offre", disc: 'Aucune garantie de résultat : les réponses des IA varient. Nous mesurons avant et après.', engines: 'Nous testons sur' },
  s1: { n: '01', label: 'Le constat', h2: 'Pourquoi une entreprise reste invisible', items: [
   { t: 'Un site flou pour une machine', d: "Les IA reprennent ce qu'elles comprennent vite : une offre claire, des pages précises, des réponses directes. Un site vague est ignoré." },
-  { t: 'Aucune donnée structurée', d: "Sans balisage schema.org, votre entreprise, vos services et votre zone d'activité restent ambigus pour une machine." },
+  { t: 'Des informations qui se contredisent', d: "Adresse, horaires, services : quand votre site et vos fiches en ligne ne disent pas la même chose, les IA hésitent. Un balisage schema.org propre peut aider à lever l'ambiguïté, sans être obligatoire." },
   { t: 'Peu de sources tierces', d: "Les IA recoupent plusieurs sources. Des fiches et mentions cohérentes et légitimes renforcent votre crédibilité." } ] },
  demo: { n: '02', label: 'Essayez', h2: "À quoi ressemble la différence", d: "Saisissez votre entreprise et votre activité. L'exemple ci-dessous montre le type de changement que nous cherchons à obtenir.", company: 'Votre entreprise', activity: 'Votre activité', companyPh: 'Ex. Zara', activityPh: 'vêtements et mode', before: 'Avant', after: 'Après (exemple)', q: 'Quelle entreprise me recommandes-tu dans ce domaine : {a} ?', note: "Exemple illustratif construit par nous. Ce n'est ni une vraie réponse d'IA ni un résultat obtenu.", compA: 'Concurrent A', compB: 'Concurrent B', compC: 'Concurrent C' },
- method: { n: '03', label: 'La méthode', h2: 'Quatre étapes, un calendrier clair', steps: [
+ method: { n: '03', label: 'La méthode', h2: 'Quatre étapes, un calendrier clair', note: "Comment nous mesurons : 30 questions réalistes, posées plusieurs fois à chaque IA dans des conversations neuves. Nous notons la fréquence de citation et gardons des captures datées.", steps: [
   { when: 'Jours 1 à 5', t: 'Audit', d: "Nous posons des questions réalistes de vos clients à ChatGPT, Gemini, AI Overviews, Claude et Perplexity. Nous notons si vous êtes cité, par qui, avec quelles sources." },
   { when: 'Semaines 2 à 4', t: 'Actions', d: "Réécriture des pages clés, FAQ, données structurées, cohérence de vos fiches en ligne. Un plan priorisé, des livrables prêts à publier." },
   { when: "Après publication, jusqu'à J+14", t: "Point d'étape", d: "Nous vérifions que vos pages sont en ligne et lisibles par les robots, puis nous refaisons un mini-test. Vous savez ce qui a déjà bougé et ce qui n'a pas encore d'effet." },
@@ -25,12 +25,16 @@ fr: {
   "Rapport de départ : êtes-vous cité, par qui, avec quelles sources",
   "Plan d'actions priorisé",
   "Rédaction de 5 contenus clés (page service, à propos, FAQ…) prêts à publier",
-  "Données structurées schema.org prêtes à intégrer",
+  "Balisage schema.org prêt à intégrer (optionnel, utile pour lever les ambiguïtés)",
   "Liste de fiches et annuaires légitimes pertinents pour votre activité",
   "Point d'étape à J+14 après publication", "Re-test à 30 jours et rapport comparatif avant/après" ],
   notH: 'Non inclus, jamais', not: ["Acheter de faux avis ou publier de faux messages sur des forums", "Poster à votre place sans votre accord"],
   clientH: 'De votre côté', client: ["Publier les contenus sur votre site (ou nous donner l'accès pour le faire)", "Valider les informations factuelles sur votre entreprise", "Nous répondre sous 3 jours ouvrés pendant les 30 jours"], cta: 'Commencer par le mini-audit gratuit' },
  pilot: { n: '05', label: 'Programme pilote', h2: 'Nous cherchons nos premiers cas, honnêtement', d: "Sorevo est nouveau et n'a pas encore de cas client publié. Nous ouvrons 2 à 3 audits complets gratuits à des PME de Barcelone.", give: 'Vous recevez', gives: ["Un audit complet offert", "Un plan d'actions concret", "Un re-test à 30 jours"], get: 'Nous demandons', gets: ["Un témoignage honnête, positif ou non", "L'accord de citer les résultats mesurés (anonymisés si vous préférez)"], cta: 'Candidater au programme pilote' },
+ isnt: { h2: "Ce que Sorevo n'est pas", items: [
+  "Un logiciel ou un abonnement : c'est un service réalisé par une personne, avec un livrable à la fin.",
+  "Une promesse de position : aucune IA ne peut être achetée ni garantie.",
+  "Du spam de liens ou de faux avis : nous travaillons uniquement avec des sources légitimes." ] },
  limits: { n: '06', label: 'Nos limites', h2: 'Ce que nous ne savons pas (encore)', items: [
   "Aucun outil ne montre exactement pourquoi une IA cite une entreprise plutôt qu'une autre.",
   "Les réponses changent d'un jour à l'autre. Nous posons chaque question plusieurs fois et notons les écarts.",
@@ -109,10 +113,10 @@ en: {
  hero: { label: 'AI VISIBILITY', a: 'Everyone asks AI. Be ', b: 'in the answer', c: '.', sub: 'Your future customers already ask an AI who to pick. We measure where you stand, fix what makes you invisible, then rerun the exact same tests 30 days later.', cta1: 'Get my free mini-audit', cta2: 'See the offer', disc: 'No guarantee of results: AI answers vary. We measure before and after.', engines: 'We test on' },
  s1: { n: '01', label: 'The problem', h2: 'Why a business stays invisible', items: [
   { t: 'A site machines cannot read clearly', d: 'AI picks up what it understands quickly: a clear offer, precise pages, direct answers. A vague site gets skipped.' },
-  { t: 'No structured data', d: 'Without schema.org markup, your company, services and service area stay ambiguous to a machine.' },
+  { t: 'Information that contradicts itself', d: 'Address, hours, services: when your site and your online listings disagree, AIs hesitate. Clean schema.org markup can help remove ambiguity, though it is not required.' },
   { t: 'Few third-party sources', d: 'AI cross-checks sources. Consistent, legitimate listings and mentions build credibility.' } ] },
  demo: { n: '02', label: 'Try it', h2: 'What the difference looks like', d: 'Enter your company and your business. The example below shows the kind of change we aim for.', company: 'Your company', activity: 'Your business', companyPh: 'E.g. Zara', activityPh: 'clothing and fashion', before: 'Before', after: 'After (example)', q: 'Which company do you recommend in this field: {a}?', note: 'Illustrative example built by us. It is not a real AI answer nor an achieved result.', compA: 'Competitor A', compB: 'Competitor B', compC: 'Competitor C' },
- method: { n: '03', label: 'The method', h2: 'Four steps, a clear timeline', steps: [
+ method: { n: '03', label: 'The method', h2: 'Four steps, a clear timeline', note: 'How we measure: 30 realistic questions, each asked several times on every AI in fresh conversations. We record how often you are cited and keep dated screenshots.', steps: [
   { when: 'Days 1 to 5', t: 'Audit', d: 'We ask realistic customer questions to ChatGPT, Gemini, AI Overviews, Claude and Perplexity. We record whether you are cited, by whom, from which sources.' },
   { when: 'Weeks 2 to 4', t: 'Actions', d: 'Rewritten key pages, FAQ, structured data, consistent online listings. A prioritised plan and ready-to-publish deliverables.' },
   { when: 'After publication, up to day 14', t: 'Checkpoint', d: 'We check that your pages are live and readable by crawlers, then rerun a mini-test. You see what has already moved and what has no effect yet.' },
@@ -122,12 +126,16 @@ en: {
   'Baseline report: are you cited, by whom, from which sources',
   'Prioritised action plan',
   '5 key content pieces written (service page, about, FAQ…) ready to publish',
-  'schema.org structured data ready to integrate',
+  'schema.org markup ready to integrate (optional, helps remove ambiguity)',
   'List of legitimate listings and directories relevant to your business',
   'Checkpoint at day 14 after publication', '30-day re-test and before/after comparison report' ],
   notH: 'Never included', not: ['Buying fake reviews or posting fake messages on forums', 'Posting on your behalf without your approval'],
   clientH: 'On your side', client: ['Publish the content on your site (or give us access to do it)', 'Validate factual information about your business', 'Reply within 3 working days during the 30 days'], cta: 'Start with the free mini-audit' },
  pilot: { n: '05', label: 'Pilot programme', h2: 'We are looking for our first cases, honestly', d: 'Sorevo is new and has no published client case yet. We are opening 2 to 3 free full audits to Barcelona SMEs.', give: 'You get', gives: ['A full audit, free', 'A concrete action plan', 'A 30-day re-test'], get: 'We ask', gets: ['An honest testimonial, positive or not', 'Permission to cite the measured results (anonymised if you prefer)'], cta: 'Apply to the pilot' },
+ isnt: { h2: 'What Sorevo is not', items: [
+  'Software or a subscription: it is a service delivered by a person, with a deliverable at the end.',
+  'A promise of ranking: no AI can be bought or guaranteed.',
+  'Link spam or fake reviews: we only work with legitimate sources.' ] },
  limits: { n: '06', label: 'Our limits', h2: 'What we do not (yet) know', items: [
   'No tool shows exactly why an AI cites one company over another.',
   'Answers change from day to day. We ask each question several times and note the differences.',
@@ -206,10 +214,10 @@ es: {
  hero: { label: 'VISIBILIDAD EN LAS IA', a: 'Todo el mundo pregunta a la IA. Esté ', b: 'en la respuesta', c: '.', sub: 'Sus futuros clientes ya preguntan a una IA a quién elegir. Medimos dónde está, corregimos lo que le hace invisible y repetimos exactamente las mismas pruebas 30 días después.', cta1: 'Recibir mi mini-auditoría gratis', cta2: 'Ver la oferta', disc: 'Sin garantía de resultados: las respuestas de las IA varían. Medimos antes y después.', engines: 'Probamos en' },
  s1: { n: '01', label: 'El problema', h2: 'Por qué una empresa sigue siendo invisible', items: [
   { t: 'Una web poco clara para una máquina', d: 'Las IA recogen lo que entienden rápido: una oferta clara, páginas precisas, respuestas directas. Una web vaga se ignora.' },
-  { t: 'Sin datos estructurados', d: 'Sin marcado schema.org, su empresa, sus servicios y su zona de actividad quedan ambiguos para una máquina.' },
+  { t: 'Información que se contradice', d: 'Dirección, horarios, servicios: cuando su web y sus fichas en línea no coinciden, las IA dudan. Un marcado schema.org correcto puede ayudar a aclarar, aunque no es obligatorio.' },
   { t: 'Pocas fuentes de terceros', d: 'Las IA contrastan varias fuentes. Fichas y menciones coherentes y legítimas refuerzan su credibilidad.' } ] },
  demo: { n: '02', label: 'Pruébelo', h2: 'Cómo se ve la diferencia', d: 'Escriba su empresa y su actividad. El ejemplo de abajo muestra el tipo de cambio que buscamos.', company: 'Su empresa', activity: 'Su actividad', companyPh: 'Ej. Zara', activityPh: 'ropa y moda', before: 'Antes', after: 'Después (ejemplo)', q: '¿Qué empresa me recomiendas en este ámbito: {a}?', note: 'Ejemplo ilustrativo creado por nosotros. No es una respuesta real de una IA ni un resultado obtenido.', compA: 'Competidor A', compB: 'Competidor B', compC: 'Competidor C' },
- method: { n: '03', label: 'El método', h2: 'Cuatro pasos, un calendario claro', steps: [
+ method: { n: '03', label: 'El método', h2: 'Cuatro pasos, un calendario claro', note: 'Cómo medimos: 30 preguntas realistas, cada una repetida varias veces en cada IA, en conversaciones nuevas. Anotamos la frecuencia de citación y guardamos capturas con fecha.', steps: [
   { when: 'Días 1 a 5', t: 'Auditoría', d: 'Planteamos preguntas realistas de sus clientes a ChatGPT, Gemini, AI Overviews, Claude y Perplexity. Anotamos si le citan, quién y con qué fuentes.' },
   { when: 'Semanas 2 a 4', t: 'Acciones', d: 'Reescritura de páginas clave, FAQ, datos estructurados y coherencia de sus fichas online. Un plan priorizado y entregables listos para publicar.' },
   { when: 'Tras publicar, hasta el día 14', t: 'Punto de control', d: 'Comprobamos que sus páginas están en línea y son legibles para los rastreadores, y repetimos una mini-prueba. Verá qué ha cambiado ya y qué aún no tiene efecto.' },
@@ -219,12 +227,16 @@ es: {
   'Informe de partida: si le citan, quién y con qué fuentes',
   'Plan de acciones priorizado',
   'Redacción de 5 contenidos clave (página de servicio, quiénes somos, FAQ…) listos para publicar',
-  'Datos estructurados schema.org listos para integrar',
+  'Marcado schema.org listo para integrar (opcional, ayuda a aclarar)',
   'Lista de fichas y directorios legítimos relevantes para su actividad',
   'Punto de control al día 14 tras publicar', 'Re-test a 30 días e informe comparativo antes/después' ],
   notH: 'Nunca incluido', not: ['Comprar reseñas falsas o publicar mensajes falsos en foros', 'Publicar en su nombre sin su acuerdo'],
   clientH: 'Por su parte', client: ['Publicar los contenidos en su web (o darnos acceso para hacerlo)', 'Validar la información factual sobre su empresa', 'Responder en 3 días laborables durante los 30 días'], cta: 'Empezar con la mini-auditoría gratis' },
  pilot: { n: '05', label: 'Programa piloto', h2: 'Buscamos nuestros primeros casos, con honestidad', d: 'Sorevo es nuevo y aún no tiene casos de cliente publicados. Abrimos 2 o 3 auditorías completas gratuitas a pymes de Barcelona.', give: 'Usted recibe', gives: ['Una auditoría completa gratuita', 'Un plan de acciones concreto', 'Un re-test a 30 días'], get: 'Pedimos', gets: ['Un testimonio honesto, positivo o no', 'Permiso para citar los resultados medidos (anonimizados si lo prefiere)'], cta: 'Solicitar plaza en el piloto' },
+ isnt: { h2: 'Lo que Sorevo no es', items: [
+  'Un software o una suscripción: es un servicio realizado por una persona, con un entregable al final.',
+  'Una promesa de posición: ninguna IA se puede comprar ni garantizar.',
+  'Spam de enlaces o reseñas falsas: solo trabajamos con fuentes legítimas.' ] },
  limits: { n: '06', label: 'Nuestros límites', h2: 'Lo que (todavía) no sabemos', items: [
   'Ninguna herramienta muestra exactamente por qué una IA cita a una empresa y no a otra.',
   'Las respuestas cambian de un día a otro. Planteamos cada pregunta varias veces y anotamos las diferencias.',

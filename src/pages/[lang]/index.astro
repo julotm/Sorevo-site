@@ -34,6 +34,7 @@ const Sec = ({ s }: any) => s;
   </div></div></div></section>
 
 <section class="sec" id="methode"><div class="wrap grid"><p class="lab">{c.method.n} — {c.method.label}</p><div><h2>{c.method.h2}</h2>
+  <p style="max-width:640px;margin:0 0 32px;opacity:.75">{c.method.note}</p>
   <div class="steps">{c.method.steps.map((s: any) => <div><span class="when">{s.when}</span><h3>{s.t}</h3><p>{s.d}</p></div>)}</div></div></div></section>
 
 <section class="sec" id="offre"><div class="wrap grid"><p class="lab">{c.offer.n} — {c.offer.label}</p><div><h2>{c.offer.h2}</h2>

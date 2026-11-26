@@ -8,6 +8,7 @@ const jsonld = [{ '@context': 'https://schema.org', '@type': 'AboutPage', name: 
 <Base lang={lang} path="about/" title={c.about.title} desc={c.about.lead} jsonld={jsonld}>
 <section class="page"><div class="wrap"><p class="mono">Sorevo</p><h1 style="margin-top:16px">{c.about.h1}</h1><p class="lead">{c.about.lead}</p>
 <div class="lst" style="margin-top:56px;max-width:760px">{c.about.blocks.map((b: any, k: number) => <div><span class="num">0{k + 1}</span><div><h3>{b.t}</h3><p>{b.d}</p></div></div>)}</div>
+<h2 style="margin-top:72px">{c.isnt.h2}</h2><ul class="ticks no" style="max-width:760px">{c.isnt.items.map((i: string) => <li>{i}</li>)}</ul>
 <h2 style="margin-top:72px">{c.limits.h2}</h2><ul class="ticks no" style="max-width:760px">{c.limits.items.map((i: string) => <li>{i}</li>)}</ul>
 <p style="margin-top:40px"><a class="lnk" href={`/${lang}/guides/`}>{c.teaser.all} →</a> &nbsp; <a class="lnk" href={`/${lang}/faq/`}>{c.faqTeaser.all} →</a></p></div></section>
 </Base>
