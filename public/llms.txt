@@ -1,0 +1,32 @@
+# Sorevo
+
+> Sorevo helps businesses appear in the answers of AI assistants (ChatGPT, Gemini, Google AI Overviews, Claude, Perplexity). One fixed-price offer: visibility audit, action plan, content, structured data and a 30-day re-test with a before/after comparison. Founded by Jules Tommy Martin, based in Barcelona. Site available in French, English and Spanish.
+
+Key facts:
+- Offer: one package, 250 € launch price, one-off payment, no 12-month commitment. The starting mini-audit is free.
+- Method: 30 realistic customer questions tested on several AI assistants, in fresh conversations, before and after. Sorevo measures how often a business is cited; it does not promise a ranking, since AI answers vary.
+- Never included: fake reviews, fake forum posts, or publishing on a client's behalf without approval.
+- Pilot programme: 2 to 3 free full audits for Barcelona SMEs in exchange for an honest testimonial.
+- Contact: contact@sorevo.eu
+
+## Main pages
+
+- [Home and offer (English)](https://sorevo.eu/en/): what Sorevo does, the method, what is included, free mini-audit form
+- [About](https://sorevo.eu/en/about/): who is behind Sorevo
+- [FAQ and glossary](https://sorevo.eu/en/faq/): common questions, GEO / AEO / schema.org definitions
+
+## Guides
+
+- [How to choose a GEO agency: 6 questions to ask](https://sorevo.eu/en/guides/choose-an-agency/)
+- [GEO, AEO, SEO: what really changes](https://sorevo.eu/en/guides/geo-vs-seo/)
+- [Test your own visibility in 15 minutes](https://sorevo.eu/en/guides/self-test/)
+
+## Other languages
+
+- [Français](https://sorevo.eu/fr/)
+- [Español](https://sorevo.eu/es/)
+
+## Optional
+
+- [Legal notice](https://sorevo.eu/en/legal/)
+- [Privacy](https://sorevo.eu/en/privacy/)
