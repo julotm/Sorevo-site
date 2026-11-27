@@ -27,10 +27,11 @@ const Sec = ({ s }: any) => s;
   <div class="lst">{c.s1.items.map((i: any, k: number) => <div><span class="num">0{k + 1}</span><div><h3>{i.t}</h3><p>{i.d}</p></div></div>)}</div></div></div></section>
 
 <section class="sec"><div class="wrap grid"><p class="lab">{c.demo.n} — {c.demo.label}</p><div><h2>{c.demo.h2}</h2><p class="mu" style="max-width:560px;margin:-16px 0 28px">{c.demo.d}</p>
-  <div class="demo" id="demo" data-q={c.demo.q} data-ca={c.demo.compA} data-cb={c.demo.compB} data-cc={c.demo.compC} data-co={c.demo.companyPh} data-ac={c.demo.activityPh}>
+  <div class="demo" id="demo" data-t={JSON.stringify(c.demo)}>
     <div class="in"><label>{c.demo.company}<input id="dc" placeholder={c.demo.companyPh} maxlength="40" /></label><label>{c.demo.activity}<input id="da" placeholder={c.demo.activityPh} maxlength="60" /></label></div>
     <div class="tabs"><button type="button" data-m="b" class="on">{c.demo.before}</button><button type="button" data-m="a">{c.demo.after}</button></div>
-    <p class="q" id="dq"></p><div class="ans" id="dans"></div><small>{c.demo.note}</small>
+    <div class="chat"><div class="u"><span class="who">{c.demo.you}</span><p id="dq"></p></div><div class="ai"><span class="who">{c.demo.ai}</span><div id="dans"></div></div></div>
+    <small>{c.demo.note}</small>
   </div></div></div></section>
 
 <section class="sec" id="methode"><div class="wrap grid"><p class="lab">{c.method.n} — {c.method.label}</p><div><h2>{c.method.h2}</h2>
@@ -66,11 +67,14 @@ const Sec = ({ s }: any) => s;
     const dc = document.getElementById('dc') as HTMLInputElement, da = document.getElementById('da') as HTMLInputElement;
     const dq = document.getElementById('dq')!, dans = document.getElementById('dans')!;
     const esc = (s: string) => s.replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch] as string));
+    const T = JSON.parse(d.dataset.t!);
     const render = () => {
-      const co = dc.value.trim() || d.dataset.co!, ac = da.value.trim() || d.dataset.ac!;
-      dq.textContent = d.dataset.q!.replace('{a}', ac);
-      const rows = mode === 'b' ? [d.dataset.ca, d.dataset.cb, d.dataset.cc] : [d.dataset.ca, co, d.dataset.cb];
-      dans.innerHTML = rows.map((r, i) => `<div class="${mode === 'a' && i === 1 ? 'me' : ''}"><b>0${i + 1}</b><span>${esc(String(r))}</span></div>`).join('');
+      const co = dc.value.trim() || T.companyPh, ac = da.value.trim() || T.activityPh;
+      const fill = (x: string) => esc(x).split('{c}').join(`<strong>${esc(co)}</strong>`).split('{a}').join(esc(ac));
+      dq.textContent = T.q.replace('{a}', ac);
+      dans.innerHTML = mode === 'b'
+        ? `<p>${esc(T.bIntro)}</p><ul>${T.bItems.map((x: string) => `<li>${esc(x)}</li>`).join('')}</ul><p class="mu">${esc(T.bOut)}</p>`
+        : `<p>${esc(T.aIntro)}</p><ul><li class="me">${fill(T.aMe)}</li></ul><p class="mu">${esc(T.aOthers)}</p><p class="src">${fill(T.aSrc)}</p>`;
     };
     d.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => { mode = (b as HTMLElement).dataset.m!; d.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b)); render(); }));
     dc.addEventListener('input', render); da.addEventListener('input', render); render();
