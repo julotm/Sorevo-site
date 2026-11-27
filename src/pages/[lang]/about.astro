@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { t, langs, type Lang } from '../../i18n/content';
 export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
 const lang = Astro.params.lang as Lang; const c = t[lang];
-const jsonld = [{ '@context': 'https://schema.org', '@type': 'AboutPage', name: c.about.title, url: `https://sorevo.eu/${lang}/about/`, inLanguage: lang, about: { '@type': 'Organization', name: 'Sorevo', founder: { '@type': 'Person', name: 'Jules Tommy Martin' } } }];
+const jsonld = [{ '@context': 'https://schema.org', '@type': 'AboutPage', name: c.about.title, url: `https://sorevo.eu/${lang}/about/`, inLanguage: lang, about: { '@type': 'Organization', '@id': 'https://sorevo.eu/#org', name: 'Sorevo', email: 'contact@sorevo.eu', founder: { '@type': 'Person', name: 'Jules Tommy Martin' } } }];
 ---
 <Base lang={lang} path="about/" title={c.about.title} desc={c.about.lead} jsonld={jsonld}>
 <section class="page"><div class="wrap"><p class="mono">Sorevo</p><h1 style="margin-top:16px">{c.about.h1}</h1><p class="lead">{c.about.lead}</p>

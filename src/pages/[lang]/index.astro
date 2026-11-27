@@ -5,7 +5,7 @@ export function getStaticPaths() { return langs.map(lang => ({ params: { lang } 
 const lang = Astro.params.lang as Lang;
 const c = t[lang]; const L = `/${lang}`; const base = 'https://sorevo.eu';
 const jsonld = [
-  { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'Sorevo', url: `${base}/${lang}/`, description: c.desc, areaServed: { '@type': 'City', name: 'Barcelona' }, knowsLanguage: ['fr', 'en', 'es'], serviceType: 'Generative Engine Optimization (GEO/AEO)' },
+  { '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': `${base}/#org`, name: 'Sorevo', url: `${base}/${lang}/`, logo: `${base}/favicon.svg`, image: `${base}/og.png`, email: 'contact@sorevo.eu', description: c.desc, founder: { '@type': 'Person', name: 'Jules Tommy Martin' }, areaServed: { '@type': 'City', name: 'Barcelona' }, knowsLanguage: ['fr', 'en', 'es'], serviceType: 'Generative Engine Optimization (GEO/AEO)', priceRange: '€', makesOffer: { '@type': 'Offer', name: 'GEO / AI visibility audit and optimisation', description: c.offer.includes.join(' · '), price: '250', priceCurrency: 'EUR', url: `${base}/${lang}/#offre` } },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqPage.items.slice(0, 4).map((i: any) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
   { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Sorevo', url: `${base}/${lang}/`, inLanguage: lang }
 ];
