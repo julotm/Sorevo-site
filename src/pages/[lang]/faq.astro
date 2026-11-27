@@ -8,5 +8,5 @@ const jsonld = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
 <Base lang={lang} path="faq/" title={f.title} desc={f.items[0].a} jsonld={jsonld}>
 <section class="page"><div class="wrap"><h1>{f.h1}</h1>
 <div style="max-width:760px;margin-top:48px"><p class="lab">{f.faqH}</p>{f.items.map((i: any) => <details><summary>{i.q}</summary><p>{i.a}</p></details>)}
-<p class="lab" style="margin-top:64px">{f.glH}</p><dl style="margin:0">{f.glossary.map((i: any) => <div style="border-top:1px solid var(--ln);padding:18px 0;display:grid;grid-template-columns:160px 1fr;gap:20px"><dt style="font:400 24px Fraunces,serif;color:var(--lime)">{i.q}</dt><dd style="margin:0;color:var(--mu)">{i.a}</dd></div>)}</dl></div></div></section>
+<p class="lab" style="margin-top:64px">{f.glH}</p><dl style="margin:0">{f.glossary.map((i: any) => <div style="border-top:1px solid var(--ln);padding:18px 0;display:grid;grid-template-columns:160px 1fr;gap:20px"><dt style="font:400 24px 'Fraunces Variable',serif;color:var(--lime)">{i.q}</dt><dd style="margin:0;color:var(--mu)">{i.a}</dd></div>)}</dl></div></div></section>
 </Base>
