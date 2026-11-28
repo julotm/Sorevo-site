@@ -1,9 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { t, langs, slugs, type Lang } from '../../i18n/content';
+import { t, langs, slugs, wiz, type Lang } from '../../i18n/content';
 export function getStaticPaths() { return langs.map(lang => ({ params: { lang } })); }
 const lang = Astro.params.lang as Lang;
-const c = t[lang]; const L = `/${lang}`; const base = 'https://sorevo.eu';
+const c = t[lang]; const w = wiz[lang]; const L = `/${lang}`; const base = 'https://sorevo.eu';
 const jsonld = [
   { '@context': 'https://schema.org', '@type': 'ProfessionalService', '@id': `${base}/#org`, name: 'Sorevo', url: `${base}/${lang}/`, logo: `${base}/favicon.svg`, image: `${base}/og.png`, email: 'contact@sorevo.eu', description: c.desc, founder: { '@type': 'Person', name: 'Jules Tommy Martin' }, areaServed: { '@type': 'City', name: 'Barcelona' }, knowsLanguage: ['fr', 'en', 'es'], serviceType: 'Generative Engine Optimization (GEO/AEO)', priceRange: '€', makesOffer: { '@type': 'Offer', name: 'GEO / AI visibility audit and optimisation', description: c.offer.includes.join(' · '), price: '250', priceCurrency: 'EUR', url: `${base}/${lang}/#offre` } },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqPage.items.slice(0, 4).map((i: any) => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
@@ -47,17 +47,41 @@ const Sec = ({ s }: any) => s;
   <div class="two"><div><p class="lab">{c.pilot.give}</p><ul class="ticks">{c.pilot.gives.map((i: string) => <li>{i}</li>)}</ul></div><div><p class="lab">{c.pilot.get}</p><ul class="ticks">{c.pilot.gets.map((i: string) => <li>{i}</li>)}</ul></div></div>
   <a class="btn" href="#audit">{c.pilot.cta}</a></div></div></section>
 
-<section class="sec" id="audit"><div class="wrap grid"><p class="lab">{c.form.n} — {c.form.label}</p><div><h2>{c.form.h2}</h2><p class="mu" style="margin:-16px 0 32px">{c.form.d}</p>
-  <form id="f" data-url={url} data-key={key} data-lang={lang} data-ok={c.form.ok} data-err={c.form.err} data-sending={c.form.sending} data-submit={c.form.submit}>
-    <label>{c.form.name}<input name="name" required maxlength="120" autocomplete="name" /></label>
-    <label>{c.form.email}<input name="email" type="email" required maxlength="200" autocomplete="email" /></label>
-    <label>{c.form.company}<input name="company" required maxlength="160" autocomplete="organization" /></label>
-    <label>{c.form.website}<input name="website" type="url" maxlength="300" placeholder="https://" /></label>
-    <label>{c.form.service}<textarea name="service" rows="2" maxlength="500" placeholder={c.form.servicePh}></textarea></label>
-    <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-    <label class="chk"><input type="checkbox" name="consent" required /><span>{c.form.consent}</span></label>
-    <div><button class="btn" type="submit">{c.form.submit}</button></div>
-    <p class="msg" id="msg" role="status"></p>
+<section class="sec" id="audit"><div class="wrap grid"><p class="lab">{c.form.n} — {c.form.label}</p><div><h2 id="audit-h">{c.form.h2}</h2><p class="mu" style="margin:-16px 0 32px">{c.form.d}</p>
+  <form id="f" class="wiz" method="post" action="#audit" aria-labelledby="audit-h" novalidate data-url={url} data-key={key} data-lang={lang} data-ok={c.form.ok} data-err={c.form.err} data-sending={c.form.sending} data-submit={c.form.submit} data-pick={w.pick}>
+    <div class="prog" hidden><span class="lab" id="prog-t" aria-live="polite">{w.step} <b>1</b> {w.of} 3</span><span class="bar"><i></i></span></div>
+    <fieldset class="step" data-step="1">
+      <legend><h3 tabindex="-1">{w.q1}</h3></legend>
+      <div class="opts">{w.needs.map((n, i) => <label class="opt"><input class="vh" type="radio" name="need" value={n} required={i === 0} /><span>{n}</span></label>)}</div>
+      <p class="err" role="alert"></p>
+      <div class="nav"><button class="btn nx" type="button">{w.next} →</button></div>
+    </fieldset>
+    <fieldset class="step" data-step="2">
+      <legend><h3 tabindex="-1">{w.q2}</h3></legend>
+      <div class="opts">{w.sectors.map((n, i) => <label class="opt"><input class="vh" type="radio" name="sector" value={n} required={i === 0} /><span>{n}</span></label>)}</div>
+      <label class="fld" for="f-detail">{w.detail}</label>
+      <input id="f-detail" name="service" maxlength="400" placeholder={c.form.servicePh} enterkeyhint="next" />
+      <fieldset class="sub"><legend class="fld">{w.site}</legend>
+        <div class="opts sm"><label class="opt"><input class="vh" type="radio" name="hasSite" value="yes" /><span>{w.yes}</span></label><label class="opt"><input class="vh" type="radio" name="hasSite" value="no" /><span>{w.no}</span></label></div>
+      </fieldset>
+      <div class="urlbox"><label class="fld" for="f-website">{w.url}</label>
+      <input id="f-website" name="website" type="text" inputmode="url" autocomplete="url" autocorrect="off" autocapitalize="none" spellcheck="false" maxlength="300" placeholder="monsite.com" /></div>
+      <p class="err" role="alert"></p>
+      <div class="nav"><button class="bk" type="button">← {w.back}</button><button class="btn nx" type="button">{w.next} →</button></div>
+    </fieldset>
+    <fieldset class="step" data-step="3">
+      <legend><h3 tabindex="-1">{w.q3}</h3></legend>
+      <label class="fld" for="f-name">{c.form.name} <span aria-hidden="true">*</span></label>
+      <input id="f-name" name="name" required maxlength="120" autocomplete="name" enterkeyhint="next" />
+      <label class="fld" for="f-email">{c.form.email} <span aria-hidden="true">*</span></label>
+      <input id="f-email" name="email" type="email" required maxlength="200" autocomplete="email" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="next" />
+      <label class="fld" for="f-company">{c.form.company} <span aria-hidden="true">*</span></label>
+      <input id="f-company" name="company" required maxlength="160" autocomplete="organization" enterkeyhint="send" />
+      <input class="hp" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <label class="chk"><input type="checkbox" name="consent" required /><span>{c.form.consent}</span></label>
+      <div class="nav"><button class="bk" type="button">← {w.back}</button><button class="btn sb" type="submit">{c.form.submit}</button></div>
+    </fieldset>
+    <p class="msg" id="msg" role="status" tabindex="-1"></p>
   </form></div></div></section>
 </Base>
 <script>
@@ -80,18 +104,62 @@ const Sec = ({ s }: any) => s;
     dc.addEventListener('input', render); da.addEventListener('input', render); render();
   }
   const f = document.getElementById('f') as HTMLFormElement | null;
-  if (f) f.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const s = f.dataset; const msg = document.getElementById('msg')!; const btn = f.querySelector('button')!;
-    const v = (n: string) => (f.elements.namedItem(n) as HTMLInputElement);
-    if (v('hp').value) return;
-    btn.disabled = true; btn.textContent = s.sending!; msg.textContent = ''; msg.className = 'msg';
-    try {
-      const body = { name: v('name').value.trim(), email: v('email').value.trim(), company: v('company').value.trim(), website: v('website').value.trim() || null, service: v('service').value.trim() || null, lang: s.lang, consent: v('consent').checked };
-      const r = await fetch(`${s.url}/rest/v1/audit_requests`, { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: s.key!, Authorization: `Bearer ${s.key}`, Prefer: 'return=minimal' }, body: JSON.stringify(body) });
-      if (!r.ok) throw new Error(String(r.status));
-      msg.textContent = s.ok!; msg.className = 'msg ok'; f.reset();
-    } catch { msg.textContent = s.err!; msg.className = 'msg err'; }
-    btn.disabled = false; btn.textContent = s.submit!;
-  });
+  if (f) {
+    const s = f.dataset; const msg = document.getElementById('msg')!;
+    const steps = [...f.querySelectorAll<HTMLFieldSetElement>('.step')];
+    const prog = f.querySelector<HTMLElement>('.prog')!; const progN = prog.querySelector('b')!;
+    const urlbox = f.querySelector<HTMLElement>('.urlbox')!;
+    const el = (n: string) => f.elements.namedItem(n) as any;
+    let cur = 0;
+    const show = (i: number, focus = true) => {
+      cur = i;
+      steps.forEach((st, k) => { st.hidden = k !== i; st.inert = k !== i; });
+      progN.textContent = String(i + 1); prog.style.setProperty('--p', String((i + 1) / steps.length));
+      if (focus) steps[i].querySelector<HTMLElement>('h3')!.focus();
+    };
+    const syncUrl = () => { urlbox.hidden = el('hasSite').value !== 'yes'; };
+    const stepOk = (i: number) => {
+      const st = steps[i]; const err = st.querySelector<HTMLElement>('.err');
+      const bad = [...st.querySelectorAll<HTMLInputElement>('input[required]')].find(x => !x.checkValidity());
+      if (err) err.textContent = bad ? s.pick! : '';
+      if (bad) { (st.querySelector('input') as HTMLInputElement).focus(); return false; }
+      return true;
+    };
+    f.classList.add('js'); prog.hidden = false; syncUrl(); show(0, false);
+    f.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest('button');
+      if (b?.classList.contains('nx') && stepOk(cur)) show(cur + 1);
+      if (b?.classList.contains('bk')) show(cur - 1);
+    });
+    f.addEventListener('change', (e) => {
+      const x = e.target as HTMLInputElement;
+      if (x.type !== 'radio') return;
+      const err = x.closest('.step')!.querySelector<HTMLElement>('.err'); if (err) err.textContent = '';
+      if (x.name === 'hasSite') syncUrl();
+    });
+    // One-click advance for pointer users only; keyboard users move between options with arrows and confirm with Continue
+    f.addEventListener('click', (e) => {
+      const x = e.target as HTMLInputElement;
+      if (x.type === 'radio' && x.name === 'need' && e.detail > 0) setTimeout(() => show(1), 180);
+    });
+    f.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (el('hp').value) return;
+      for (let i = 0; i < steps.length; i++) if (i < 2 && !stepOk(i)) { show(i); return; }
+      const bad = [...steps[2].querySelectorAll<HTMLInputElement>('input[required]')].find(x => !x.checkValidity());
+      if (bad) { bad.reportValidity(); bad.focus(); return; }
+      const btn = f.querySelector<HTMLButtonElement>('.sb')!;
+      btn.disabled = true; btn.textContent = s.sending!; msg.textContent = ''; msg.className = 'msg';
+      let site = el('hasSite').value === 'yes' ? el('website').value.trim() : '';
+      if (site && !/^https?:\/\//i.test(site)) site = 'https://' + site;
+      const service = [el('need').value, el('sector').value, el('service').value.trim()].filter(Boolean).join(' · ');
+      try {
+        const body = { name: el('name').value.trim(), email: el('email').value.trim(), company: el('company').value.trim(), website: site || null, service: service || null, lang: s.lang, consent: el('consent').checked };
+        const r = await fetch(`${s.url}/rest/v1/audit_requests`, { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: s.key!, Authorization: `Bearer ${s.key}`, Prefer: 'return=minimal' }, body: JSON.stringify(body) });
+        if (!r.ok) throw new Error(String(r.status));
+        msg.textContent = s.ok!; msg.className = 'msg ok'; f.reset(); syncUrl(); show(0, false); msg.focus();
+      } catch { msg.textContent = s.err!; msg.className = 'msg err'; }
+      btn.disabled = false; btn.textContent = s.submit!;
+    });
+  }
 </script>

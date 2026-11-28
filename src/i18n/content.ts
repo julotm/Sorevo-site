@@ -308,3 +308,21 @@ es: {
    'Anote en una tabla: si le citan, en qué posición, qué fuentes muestra la IA y si la información es correcta. Repita la prueba en una semana: las respuestas se mueven. Es exactamente lo que hace nuestra auditoría, con más profundidad.' ] } }
 }
 };
+
+export const wiz = {
+  fr: { step: 'Étape', of: 'sur', next: 'Continuer', back: 'Retour', pick: 'Choisissez une option pour continuer.',
+    q1: "Qu'est-ce qui vous amène ?", needs: ['Savoir si les IA me citent', 'Mes concurrents apparaissent, pas moi', "L'offre complète m'intéresse", "J'ai juste une question"],
+    q2: 'Votre activité ?', sectors: ['Restaurant / café', 'Commerce', 'Artisan / services', 'Cabinet / profession libérale', 'Startup / B2B', 'Autre'],
+    detail: 'En quelques mots (optionnel)', site: 'Vous avez un site ?', yes: 'Oui', no: 'Pas encore', url: 'Adresse du site',
+    q3: 'Où vous envoyer le mini-audit ?', req: 'obligatoire' },
+  en: { step: 'Step', of: 'of', next: 'Continue', back: 'Back', pick: 'Pick an option to continue.',
+    q1: 'What brings you here?', needs: ['Find out if AI cites me', 'My competitors show up, not me', 'I want the full offer', 'I just have a question'],
+    q2: 'What do you do?', sectors: ['Restaurant / café', 'Shop / retail', 'Trades / home services', 'Professional practice', 'Startup / B2B', 'Other'],
+    detail: 'In a few words (optional)', site: 'Do you have a website?', yes: 'Yes', no: 'Not yet', url: 'Website address',
+    q3: 'Where should we send your mini-audit?', req: 'required' },
+  es: { step: 'Paso', of: 'de', next: 'Continuar', back: 'Atrás', pick: 'Elija una opción para continuar.',
+    q1: '¿Qué le trae por aquí?', needs: ['Saber si las IA me citan', 'Salen mis competidores, yo no', 'Me interesa la oferta completa', 'Solo tengo una pregunta'],
+    q2: '¿A qué se dedica?', sectors: ['Restaurante / cafetería', 'Comercio', 'Oficios / servicios', 'Despacho / profesión liberal', 'Startup / B2B', 'Otro'],
+    detail: 'En pocas palabras (opcional)', site: '¿Tiene sitio web?', yes: 'Sí', no: 'Todavía no', url: 'Dirección del sitio',
+    q3: '¿Dónde le enviamos la mini-auditoría?', req: 'obligatorio' },
+} as const;
