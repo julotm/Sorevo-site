@@ -7,6 +7,7 @@ import '@fontsource/hanken-grotesk/600.css';
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/500.css';
 import { t, langs, type Lang } from '../i18n/content';
+import heroFont from '@fontsource-variable/fraunces/files/fraunces-latin-opsz-normal.woff2?url';
 const { lang, path = '', title, desc, jsonld = [], og = 'website' } = Astro.props as { lang: Lang; path?: string; title: string; desc: string; jsonld?: object[]; og?: string };
 const base = 'https://sorevo.eu';
 const c = t[lang];
@@ -25,17 +26,21 @@ const L = `/${lang}`;
 <meta property="og:image" content={`${base}/og.png`} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content={`${base}/og.png`} />
 <meta name="theme-color" content="#0B0F14" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preload" href={heroFont} as="font" type="font/woff2" crossorigin />
 {jsonld.map(j => <script type="application/ld+json" set:html={JSON.stringify(j)} />)}
 </head>
 <body>
+<a class="skip" href="#main">{c.htmlLang.startsWith('fr') ? 'Aller au contenu' : c.htmlLang.startsWith('es') ? 'Ir al contenido' : 'Skip to content'}</a>
 <header class="top"><div class="wrap bar">
   <a class="brand" href={`${L}/`} set:html={`${logo}<span>Sorevo</span>`} />
-  <nav class="links" aria-label="Principal">
+  <button class="menu-btn" type="button" popovertarget="site-menu" aria-controls="site-menu">Menu</button>
+  <nav class="links" id="site-menu" popover="auto" aria-label="Principal">
     <a href={`${L}/#offre`}>{c.nav.offer}</a><a href={`${L}/#methode`}>{c.nav.method}</a><a href={`${L}/guides/`}>{c.nav.guides}</a><a href={`${L}/about/`}>{c.nav.about}</a><a href={`${L}/faq/`}>{c.nav.faq}</a>
+    <span class="mlangs">{langs.map(l => <a href={`/${l}/${path}`} class={l === lang ? 'on' : ''} hreflang={l} lang={l}>{l.toUpperCase()}</a>)}</span>
   </nav>
   <div class="right"><span class="langs">{langs.map((l, i) => <><a href={`/${l}/${path}`} class={l === lang ? 'on' : ''} hreflang={l}>{l.toUpperCase()}</a>{i < 2 && <i>/</i>}</>)}</span><a class="cta-s" href={`${L}/#audit`}>{c.nav.cta} →</a></div>
 </div></header>
-<main><slot /></main>
+<main id="main" tabindex="-1"><slot /></main>
 <footer class="foot"><div class="wrap fgrid">
   <div><a class="brand" href={`${L}/`} set:html={`${logo}<span>Sorevo</span>`} /><p class="mu">{c.footer.tag}</p></div>
   <div><p class="mono">{c.footer.nav}</p><a href={`${L}/#offre`}>{c.nav.offer}</a><a href={`${L}/guides/`}>{c.nav.guides}</a><a href={`${L}/about/`}>{c.nav.about}</a><a href={`${L}/faq/`}>{c.nav.faq}</a></div>
@@ -43,10 +48,14 @@ const L = `/${lang}`;
   <div class="fine"><a href={`${L}/legal/`}>{c.footer.legal}</a><a href={`${L}/privacy/`}>{c.footer.privacy}</a><span>© {new Date().getFullYear()} Sorevo. {c.footer.rights}</span></div>
 </div></footer>
 <style is:global>
-:root{--bg:#0B0F14;--tx:#ECEFE8;--mu:#A4AEA8;--mu2:#6B756F;--ln:#26302C;--lime:#C6F24E}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Fraunces Variable',Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.02em;margin:0}
+:root{--bg:#0B0F14;--tx:#ECEFE8;--mu:#A4AEA8;--mu2:#848E88;--ln:#26302C;--lime:#C6F24E}
+*{box-sizing:border-box}html{scroll-padding-top:84px}@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}main:focus{outline:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--lime);color:var(--bg);padding:10px 14px;font-weight:600;text-decoration:none}.skip:focus{top:12px}
+.menu-btn{display:none;background:none;border:1px solid var(--ln);color:var(--tx);font:500 12px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:0 14px;min-height:44px;cursor:pointer}.mlangs{display:none}
+.links[popover]{display:flex;position:static;inset:auto;margin:0 0 0 16px;padding:0;border:0;background:none;color:inherit;overflow:visible}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.65 'Hanken Grotesk',system-ui,sans-serif;font-size-adjust:from-font;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces Variable',Georgia,serif;font-size-adjust:from-font;font-weight:400;line-height:1.05;letter-spacing:-.02em;margin:0}
 em{font-style:italic;color:var(--lime)}a{color:inherit}.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 .mono,.lab,.when{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--mu2)}.mu{color:var(--mu)}
 .top{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
@@ -71,7 +80,7 @@ em{font-style:italic;color:var(--lime)}a{color:inherit}.wrap{max-width:1200px;ma
 .chat{display:grid;gap:14px}.chat .who{display:block;font:500 11px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--mu2);margin-bottom:6px}.chat .u{justify-self:end;max-width:85%;background:#151B22;border:1px solid var(--ln);padding:12px 16px}.chat .u p{margin:0;font:italic 400 19px 'Fraunces Variable',serif}.chat .ai{border-left:2px solid var(--ln);padding:4px 0 4px 18px}.chat .ai p{margin:0 0 10px}.chat .ai ul{margin:0 0 10px;padding-left:18px;color:var(--mu)}.chat .ai li{margin:6px 0}.chat .ai li.me{color:var(--tx);list-style:none;margin-left:-18px;padding:10px 12px;border:1px solid var(--lime)}.chat .ai li.me strong{color:var(--lime)}.chat .ai .src{font:400 12px 'JetBrains Mono',monospace;color:var(--mu2)}
 .demo small{display:block;margin-top:14px;color:var(--mu2);font-size:13px}
 .offerbox{display:grid;grid-template-columns:1fr 1.3fr;gap:48px}.price{font:300 clamp(64px,9vw,120px) 'Fraunces Variable',serif;line-height:1;color:var(--lime)}
-.ticks{list-style:none;padding:0;margin:0 0 28px}.ticks li{padding:12px 0 12px 32px;border-top:1px solid var(--ln);position:relative}.ticks li:before{content:'+';position:absolute;left:0;color:var(--lime);font-family:'JetBrains Mono',monospace}.ticks.no li:before{content:'×';color:var(--mu2)}
+.ticks{list-style:none;padding:0;margin:0 0 28px}.ticks li{padding:12px 0 12px 32px;border-top:1px solid var(--ln);position:relative}.ticks li:before{content:'+';position:absolute;left:0;color:var(--lime);font-family:'JetBrains Mono',monospace;font-size-adjust:from-font}.ticks.no li:before{content:'×';color:var(--mu2)}
 .offerbox h3{font-size:22px;margin:30px 0 6px}.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 details{border-top:1px solid var(--ln);padding:20px 0}summary{cursor:pointer;font:400 24px 'Fraunces Variable',serif;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:'+';float:right;color:var(--lime)}details[open] summary:after{content:'−'}details p{color:var(--mu);margin:.8em 0 0;max-width:680px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ln)}.cards a{padding:26px 24px 26px 0;text-decoration:none;border-right:1px solid var(--ln);margin-right:24px}.cards a:last-child{border:0}.cards h3{font-size:26px;margin:10px 0}.cards p{color:var(--mu);margin:0;font-size:15px}
@@ -81,7 +90,9 @@ input,textarea{background:transparent;border:0;border-bottom:1px solid var(--mu2
 .msg{margin:0;font-size:15px}.msg.ok{color:var(--lime)}.msg.err{color:#ff8a8a}
 .page{padding:80px 0}.page h1{font-size:clamp(42px,6vw,84px);margin-bottom:24px}.page .lead{font-size:22px;color:var(--mu);max-width:640px}.art{max-width:680px}.art p{margin:0 0 1.1em}
 .foot{border-top:1px solid var(--ln);padding:56px 0 32px}.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.fgrid a{display:block;text-decoration:none;color:var(--mu);padding:3px 0}.fgrid .brand{display:inline-flex;color:var(--tx)}.fine{grid-column:1/-1;border-top:1px solid var(--ln);padding-top:20px;display:flex;gap:24px;color:var(--mu2);font-size:13px;flex-wrap:wrap}.fine a{display:inline;color:var(--mu2)}
-@media(max-width:860px){.links,.langs{display:none}.grid,.offerbox,.two,.cards,.steps>div,.fgrid{grid-template-columns:1fr}.cards a{border:0;border-top:1px solid var(--ln);margin:0}.demo .in{grid-template-columns:1fr}.hero{padding-top:56px}}
+@media(max-width:860px){.langs{display:none}.menu-btn{display:inline-block;margin-left:auto}.right{gap:10px}.bar{gap:12px}
+.links[popover]:not(:popover-open){display:none}.links[popover]:popover-open{display:flex;flex-direction:column;gap:0;position:fixed;inset:auto;top:72px;right:12px;left:auto;margin:0;width:min(80dvw,20rem);max-height:calc(100dvh - 6rem);overflow:auto;background:var(--bg);border:1px solid var(--ln);padding:8px}
+.links[popover] a{padding:12px 10px;font-size:16px;color:var(--tx)}.mlangs{display:flex;gap:4px;border-top:1px solid var(--ln);margin-top:6px;padding-top:6px}.mlangs a{font:500 13px 'JetBrains Mono',monospace}.mlangs a.on{color:var(--lime)}.grid,.offerbox,.two,.cards,.steps>div,.fgrid{grid-template-columns:1fr}.cards a{border:0;border-top:1px solid var(--ln);margin:0}.demo .in{grid-template-columns:1fr}.hero{padding-top:56px}}
 </style>
 </body>
 </html>
