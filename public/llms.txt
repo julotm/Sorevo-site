@@ -1,6 +1,6 @@
 # Sorevo
 
-> Sorevo helps businesses appear in the answers of AI assistants (ChatGPT, Gemini, Google AI Overviews, Claude, Perplexity). One fixed-price offer: visibility audit, action plan, content, structured data and a 30-day re-test with a before/after comparison. Founded by Jules Tommy Martin, based in Barcelona. Site available in French, English and Spanish.
+> Sorevo helps businesses appear in the answers of AI assistants (ChatGPT, Gemini, Google AI Overviews, Claude). One fixed-price offer: visibility audit, action plan, content, structured data and a 30-day re-test with a before/after comparison. Founded by Jules Tommy Martin, based in Barcelona. Site available in French, English and Spanish.
 
 Key facts:
 - Offer: one package, 250 € launch price, one-off payment, no 12-month commitment. The starting mini-audit is free.
